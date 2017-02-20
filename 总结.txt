@@ -1,48 +1,48 @@
-1¡¢ linux°²×°
+1ã€ linuxå®‰è£…
 
-UBUNTU +WIN7 Ë«ÏµÍ³°²×°·½·¨
+UBUNTU +WIN7 åŒç³»ç»Ÿå®‰è£…æ–¹æ³•
 http://jingyan.baidu.com/album/60ccbceb18624464cab197ea.html?picindex=4
 
-UBUNTU +WIN8Ë«ÏµÍ³°²×°·½·¨
+UBUNTU +WIN8åŒç³»ç»Ÿå®‰è£…æ–¹æ³•
 http://os.51cto.com/art/201405/439158.htm
 
-UÅÌÉÕÂ¼¾µÏñ¹¤¾ßÈí¼ş
+Uç›˜çƒ§å½•é•œåƒå·¥å…·è½¯ä»¶
 http://down.tech.sina.com.cn/content/5718.html
 
-Ubuntu 14.04¾µÏñ
+Ubuntu 14.04é•œåƒ
 http://mirrors.163.com/ubuntu-releases/14.04/
 
-2¡¢ git °²×°
+2ã€ git å®‰è£…
 
 http://www.cnblogs.com/sunada2005/archive/2013/06/06/3121098.html
 
-Git ¹ÙÍø
+Git å®˜ç½‘
 https://github.com/
 
-Git Ñ§Ï°ÍøÕ¾
+Git å­¦ä¹ ç½‘ç«™
 http://pcottle.github.io/learnGitBranching/
 
-Git ½Ì³Ì 
+Git æ•™ç¨‹ 
 
 http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
 
-Linux opencv ºÍpython¿â °²×° ºÍÊ¹ÓÃ ³£ÓÃÎÊÌâ ×Ü½á
+Linux opencv å’Œpythonåº“ å®‰è£… å’Œä½¿ç”¨ å¸¸ç”¨é—®é¢˜ æ€»ç»“
 
 https://github.com/wzx1102k/opencv/blob/master/samples/sample1/readme.txt
 
-Opencv ¿â°²×°
+Opencv åº“å®‰è£…
 
 http://rodrigoberriel.com/2014/10/installing-opencv-3-0-0-on-ubuntu-14-04/
 
-ÌõĞÎÂë ¼ì²â opencv¿â Ê¹ÓÃ ×Ü½á
+æ¡å½¢ç  æ£€æµ‹ opencvåº“ ä½¿ç”¨ æ€»ç»“
 https://github.com/wzx1102k/opencv/blob/master/samples/sample2/readme.txt
 
-opencv 3.0 °²×°
+opencv 3.0 å®‰è£…
 http://www.pyimagesearch.com/2015/06/22/install-opencv-3-0-and-python-2-7-on-ubuntu/
 http://stackoverflow.com/questions/40391493/opencv-3-1-0-compile-fails
 
-
-
-
+jpegå‹ç¼©åŸç†è¯¦ç»†åˆ†æ
+http://www.eetop.cn/blog/html/56/856756-33094.html
+http://blog.sina.com.cn/s/blog_4e77a44e01015w7b.html
 
 
