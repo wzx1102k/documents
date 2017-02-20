@@ -42,6 +42,7 @@ http://www.pyimagesearch.com/2015/06/22/install-opencv-3-0-and-python-2-7-on-ubu
 http://stackoverflow.com/questions/40391493/opencv-3-1-0-compile-fails
 
 jpeg压缩原理详细分析
+亮度值Y的范围为16 ～ 235， 色度值Cb,Cr的范围为16 ～ 240
 http://www.eetop.cn/blog/html/56/856756-33094.html
 http://blog.sina.com.cn/s/blog_4e77a44e01015w7b.html
 
