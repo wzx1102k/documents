@@ -10,7 +10,7 @@
 
 ### 步骤2. fcitx 环境变量配置
 
-参考[fcitx输入法打死切换不出来] (https://bbs.archlinuxcn.org/viewtopic.php?id=1862)
+参考[fcitx输入法打死切换不出来](https://bbs.archlinuxcn.org/viewtopic.php?id=1862)
 在 ~/.xprofile 中写
     export GTK_IM_MODULE=fcitx
     export QT_IM_MODULE=fcitx
@@ -18,12 +18,12 @@
 
 ### 步骤3. 中文输入法配置
 
-1.在Language Support中增加汉语，然后选择输入法系统为fcitx
-2.重启系统
-3.在Text Entry中增加Sogou Pinyin
-4.使用Ctrl+space即可开启搜狗输入法
+1. 在Language Support中增加汉语，然后选择输入法系统为fcitx
+2. 重启系统
+3. 在Text Entry中增加Sogou Pinyin
+4. 使用Ctrl+space即可开启搜狗输入法
 
 ### 步骤4. 特殊字符修复
 
-参考 [ubuntu中shift键打不出特殊符号] (http://blog.csdn.net/linxingqianglai/article/details/51813548)
+参考 [ubuntu中shift键打不出特殊符号](http://blog.csdn.net/linxingqianglai/article/details/51813548)
 将输入源英语（英国）改成英语（美国）, 则 # @ 显示正常
