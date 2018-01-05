@@ -5,17 +5,16 @@
 
 ###  步骤1. 下载必要库
 
-  sudo apt install libopencc1 fcitx-libs fcitx-libs-qt
-
-  sudo dpkg –i sogoupinyin_2.0.0.0078_amd64.deb
+    sudo apt install libopencc1 fcitx-libs fcitx-libs-qt
+    sudo dpkg –i sogoupinyin_2.0.0.0078_amd64.deb
 
 ### 步骤2. fcitx 环境变量配置
 
-参考 https://bbs.archlinuxcn.org/viewtopic.php?id=1862
+参考[fcitx输入法打死切换不出来] (https://bbs.archlinuxcn.org/viewtopic.php?id=1862)
 在 ~/.xprofile 中写
-  export GTK_IM_MODULE=fcitx
-  export QT_IM_MODULE=fcitx
-  export XMODIFIERS=@im=fcitx
+    export GTK_IM_MODULE=fcitx
+    export QT_IM_MODULE=fcitx
+    export XMODIFIERS=@im=fcitx
 
 ### 步骤3. 中文输入法配置
 
@@ -26,5 +25,5 @@
 
 ### 步骤4. 特殊字符修复
 
-参考 http://blog.csdn.net/linxingqianglai/article/details/51813548
+参考 [ubuntu中shift键打不出特殊符号] (http://blog.csdn.net/linxingqianglai/article/details/51813548)
 将输入源英语（英国）改成英语（美国）, 则 # @ 显示正常
