@@ -12,6 +12,7 @@
 
 参考[fcitx输入法打死切换不出来](https://bbs.archlinuxcn.org/viewtopic.php?id=1862),
 在 ~/.xprofile 中写  
+
     export GTK_IM_MODULE=fcitx
     export QT_IM_MODULE=fcitx
     export XMODIFIERS=@im=fcitx
