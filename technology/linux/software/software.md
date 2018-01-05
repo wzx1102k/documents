@@ -28,3 +28,16 @@
 
 参考 [ubuntu中shift键打不出特殊符号](http://blog.csdn.net/linxingqianglai/article/details/51813548),
 将输入源英语（英国）改成英语（美国）, 则 # @ 显示正常
+
+## markdown 常用使用快捷键
+
+参考[markdown语法大全](https://www.jianshu.com/p/c4e93e97143c) 和
+[段落与换行](http://xianbai.me/learn-md/article/syntax/paragraphs-and-line-breaks.html)
+
+1. 段落的前后必须是空行
+2. 段内每行换行，可以行尾+2空格
+3. 插入代码前需要换行， 四个空格表示代码段
+4. 使用 \*，\+，\- 表示无序列表, 特殊字符前加\\
+5. 使用 \!\[描述\]\(图片链接地址\) 插入图像
+6. 使用 \[描述\]\(链接地址\) 为文字增加外链接。
+7. 使用 \`代码\` 表示行内代码块。
