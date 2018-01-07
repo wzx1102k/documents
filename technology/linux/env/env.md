@@ -11,11 +11,11 @@
     apt install npm
     npm install gitbook-cli -g
     cp /usr/bin/nodejs /usr/bin/node  # fix node cann't find because name is nodejs
-***
+****
 ## .bashrc
 
     alias python='/usr/bin/python3.5'
-***
+****
 ## git 配置
 
 #### git ssh-key 配置
