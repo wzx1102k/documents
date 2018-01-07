@@ -39,7 +39,7 @@
 * 创建一个新分支：`git checkout -b gh-pages`，注意，分支名必须为gh-pages。
 * gitbook build 完成后拷贝静态网站到book仓库中 `gitbook build src des`
 * 将分支push到仓库：`git push -u origin gh-pages`。
-
+********
 ## 代理翻墙设置
 * VM虚拟机 ubuntu 网页浏览设置      
  参考[VMWare虚拟机通过主机shadowsocks代理上网](http://blog.csdn.net/u010726042/article/details/53187937)
