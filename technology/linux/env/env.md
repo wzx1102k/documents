@@ -18,7 +18,8 @@
 
 ## git 配置
 
-### git ssh-key 配置
+#### git ssh-key 配置
+
     git config --global user.name "wzx1102k"
     git config --global user.email "409747794@qq.com"
     git config --global core.editor vim
@@ -28,7 +29,7 @@
 
     ssh -T git@github.com
 
-### gitbook 配置
+#### gitbook 配置
 * 登录到Github，创建一个新的仓库，名称我们就命令为book，这样我就就得到了一个book的空仓库。
 * 克隆仓库到本地：`git clone git@github.com:USER_NAME/book.git`。
 * 创建一个新分支：`git checkout -b gh-pages`，注意，分支名必须为gh-pages。

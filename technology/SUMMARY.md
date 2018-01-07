@@ -1,7 +1,7 @@
 * [Introduce](README.md)
 * [linux编程](linux/linux.md)
   * [常用软件](linux/software/software.md)
-  * [环境配置](linux/env/end.md)
+  * [环境配置](linux/env/env.md)
   * [编程](linux/coding/coding.md)
    * [C编程](linux/coding/C/C.md)
    * [C++编程](linux/coding/C++/C++.md)

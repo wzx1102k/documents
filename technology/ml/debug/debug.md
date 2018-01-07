@@ -36,16 +36,17 @@ tfrecord源数据为1,5,8,2:
     [0 0 0 0]
 从而得到不正确的结果.
 
-2. tf end to end 使用原始数据和添加合成的新数据训练对比：
-原数据:   train : 538      test: 280
-合成数据:  train: 10000     test: 1000
+2. tf end to end 使用原始数据和添加合成的新数据训练对比:
+
+原数据:   train : 538      test: 280    
+合成数据:  train: 10000     test: 1000    
 * 只使用原数据
 
-    result:   train accuracy: 100%,   test accuracy: 18%    overfitting
+    result:   train accuracy: 100%,   test accuracy: 18%    overfitting    
 * 原数据：合成数据 ： 100:100   
 
-    result:  train accuracy: 91%,   test accuracy: 60%  
+    result:  train accuracy: 91%,   test accuracy: 60%      
 * 原数据：合成数据 ： 64:32
 
-    result:  train accuracy: 80%,   test accuracy: 80%
+    result:  train accuracy: 80%,   test accuracy: 80%    
 从结果可看出添加少量合成数据 对原数据test accuracy 有比较大的提升
