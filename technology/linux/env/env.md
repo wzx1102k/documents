@@ -7,6 +7,10 @@
     apt install python3-pip
     pip3 install tensorflow
 
+    # 翻墙
+    pip3 install shadowsocks
+    apt-get install proxychains
+
     #gitbook
     apt install npm
     npm install gitbook-cli -g
@@ -35,3 +39,29 @@
 * 创建一个新分支：`git checkout -b gh-pages`，注意，分支名必须为gh-pages。
 * gitbook build 完成后拷贝静态网站到book仓库中 `gitbook build src des`
 * 将分支push到仓库：`git push -u origin gh-pages`。
+
+## 代理翻墙设置
+* VM虚拟机 ubuntu 网页浏览设置      
+ 参考[VMWare虚拟机通过主机shadowsocks代理上网](http://blog.csdn.net/u010726042/article/details/53187937)
+  - shadowsocks.exe并勾选“允许局域网连接”
+  - ubuntu System Settings – Network – Network proxy勾选Manual（手动）,
+  地址全部填宿主机IP（局域网网段），设置好代理端口    
+* VM虚拟机 ubuntu 命令行代理设置
+ 参考[Ubuntu 14.04下安装ss及proxychains](https://www.jianshu.com/p/941bf811f9c2)
+ - 安装shadowsocks
+ - 配置 ss.json
+
+    {
+        "server":"服务器地址",
+        "server_port":服务器端口,
+        "local_address":"127.0.0.1",
+        "local_port":1080,
+        "password":"密钥",
+        "timeout":300,
+        "method":"aes-256-cfb",
+        "fast_open":false
+    }
+
+  -  启动SS `sslocal -c ss.json &`
+  -  修改`/etc/proxychains.conf`， 将socks4改成socks5
+  -  proxychains运行想要翻墙的软件， 比如`proxychains git clone git@github.com:wzx1102k/tensorflow.git`
