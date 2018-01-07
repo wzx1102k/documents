@@ -28,7 +28,7 @@
 
 参考 [ubuntu中shift键打不出特殊符号](http://blog.csdn.net/linxingqianglai/article/details/51813548),
 将输入源英语（英国）改成英语（美国）, 则 # @ 显示正常
-
+****
 ## markdown 常用使用快捷键
 
 参考[markdown语法大全](https://www.jianshu.com/p/c4e93e97143c) 和
