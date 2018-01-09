@@ -8,7 +8,9 @@
     pip3 install tensorflow
 
     # 翻墙
-    pip3 install shadowsocks
+    add-apt-repository ppa:hzwhuang/ss-qt5
+    apt-get update
+    apt-get install shadowsocks-qt5
     apt-get install proxychains
 
     #gitbook
@@ -51,7 +53,7 @@
  - 安装shadowsocks
  - 配置 ss.json
 
-    {
+    >{
         "server":"服务器地址",
         "server_port":服务器端口,
         "local_address":"127.0.0.1",
@@ -65,3 +67,6 @@
   -  启动SS `sslocal -c ss.json &`
   -  修改`/etc/proxychains.conf`， 将socks4改成socks5
   -  proxychains运行想要翻墙的软件， 比如`proxychains git clone git@github.com:wzx1102k/tensorflow.git`
+* proxychains wget can't work ?     
+  参考[proxychains cannot get wget working](https://stackoverflow.com/questions/4287358/proxychains-cannot-get-wget-working),
+  修改`/usr/lib/proxychains3/proxyresolv`， 将dns改成8.8.8.8
