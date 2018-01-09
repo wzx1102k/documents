@@ -4,22 +4,22 @@
 ## 中文输入法安装
 
 ####  步骤1. 下载必要库
-
+```
     sudo apt install libopencc1 fcitx-libs fcitx-libs-qt
     sudo dpkg –i sogoupinyin_2.0.0.0078_amd64.deb
-
+```
 #### 步骤2. fcitx 环境变量配置
 
 参考[fcitx输入法打死切换不出来](https://bbs.archlinuxcn.org/viewtopic.php?id=1862),
 在 ~/.xprofile 中写  
-
+```
     export GTK_IM_MODULE=fcitx
     export QT_IM_MODULE=fcitx
     export XMODIFIERS=@im=fcitx
-
+```
 #### 步骤3. 中文输入法配置
 
-1. 在Language Support中增加汉语，然后选择输入法系统为fcitx
+>1. 在Language Support中增加汉语，然后选择输入法系统为fcitx
 2. 重启系统
 3. 在Text Entry中增加Sogou Pinyin
 4. 使用Ctrl+space即可开启搜狗输入法
@@ -34,10 +34,12 @@
 参考[markdown语法大全](https://www.jianshu.com/p/c4e93e97143c) 和
 [段落与换行](http://xianbai.me/learn-md/article/syntax/paragraphs-and-line-breaks.html)
 
-1. 段落的前后必须是空行
+>1. 段落的前后必须是空行
 2. 段内每行换行，可以行尾+2空格
 3. 插入代码前需要换行， 四个空格表示代码段
 4. 使用 \*，\+，\- 表示无序列表, 特殊字符前加\\
 5. 使用 \!\[描述\]\(图片链接地址\) 插入图像
 6. 使用 \[描述\]\(链接地址\) 为文字增加外链接。
 7. 使用 \`代码\` 表示行内代码块。
+8. 使用 一对\`\`\`区隔代码段
+9. 使用 \> \>> \>>>等段落缩进 
