@@ -2,7 +2,7 @@
 
 ## tensorflow
 
->* tensorflow Introduce
+* tensorflow Introduce
 ![](tf_high_api.png)
 ![](tf_compare.png)
 
