@@ -46,6 +46,12 @@
 * 将分支push到仓库：`git push -u origin gh-pages`。
 ********
 ## 代理翻墙设置
+* 命令行代理设置
+```
+export ALL_PROXY=socks5://127.0.0.1:1080
+# export http_proxy="http://localhost:port"
+# export https_proxy="http://localhost:port"
+```
 * VM虚拟机 ubuntu 网页浏览设置      
  参考[VMWare虚拟机通过主机shadowsocks代理上网](http://blog.csdn.net/u010726042/article/details/53187937)
   - shadowsocks.exe并勾选“允许局域网连接”

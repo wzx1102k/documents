@@ -2,7 +2,14 @@
 
 ## tensorflow
 
->* 使用tf.concat连接多个神经网络输出    
+>* tensorflow Introduce
+![](tf_high_api.png)
+![](tf_compare.png)
+
+* tf xavier init
+![](tf_xavier.png)
+
+* 使用tf.concat连接多个神经网络输出    
 ```
     tf.concat(values, concat_dim, name='concat') # 0 : 行， 1: 列
     # fc2_*  大小: 1*54;    predict 大小：1*324
