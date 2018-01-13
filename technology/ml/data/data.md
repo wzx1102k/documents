@@ -5,7 +5,7 @@
 * Analytical通过数学方式分析求解；
 * Numerical 通过迭代输入， 不断逼近理论值；
 
-！[](numerical.png)
+![](numerical.png)
 
 ## f(x,y)=max(x,y) 函数 如何求导 ?
 ```     
@@ -22,6 +22,7 @@
 
 ## 常见activation function
 ![](active_function.png)
+
 应用场景
 >* 在隐藏层中，可以用 relu, tanh, softplus 等非线性的激活函数。
 * 在分类问题中，可以用 sigmoid ，softmax 来求概率。例如选择 N 类中概率最大的那一类作为预测值。
@@ -31,9 +32,11 @@
 为了保证前向传播和反向传播时每一层的方差一致，应满足:
 
 ![](xavier1.png)
+
 实际输入与输出个数往往不相等，为均衡考量，最终权重方差应满足：
 
 ![](xavier2.png)
+
 因此，Xavier初始化的实现就是下面的均匀分布：
 
 ![](xaiver3.png)
