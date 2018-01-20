@@ -47,4 +47,6 @@
 ## Q-learning
 ![](Q-learning.png)
 * 文章参考：[强化学习算法Q-learning入门：教电脑玩“抓住芝士”小游戏](http://www.sohu.com/a/165984383_610300)
+[Q-learning 算法的简明教程](http://www.cnblogs.com/stevenbush/p/3359603.html)
+
 * github demo参考： [q-learning-simple-game](https://github.com/daugaard/q-learning-simple-game/blob/master/q_learning_player.rb)
