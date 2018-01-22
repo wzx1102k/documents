@@ -6,6 +6,7 @@
     apt install vim
     apt install python3-pip
     pip3 install tensorflow
+    pip3 install scipy
 
     # 翻墙
     add-apt-repository ppa:hzwhuang/ss-qt5
@@ -17,6 +18,27 @@
     apt install npm
     npm install gitbook-cli -g
     cp /usr/bin/nodejs /usr/bin/node  # fix node cann't find because name is nodejs
+
+    #opencv
+    # download opencv source code
+    git clone https://github.com/opencv/opencv_contrib.git
+    git clone https://github.com/opencv/opencv.git
+
+    # download related lib
+    apt-get install build-essential
+    apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+    apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
+
+    # cmake opencv
+    cd ~/opencv
+    mkdir release
+    cd release
+    cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..
+
+    # release opencv libs
+    sudo make
+    sudo make install
+
 ```
 ****
 ## .bashrc

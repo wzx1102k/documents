@@ -24,5 +24,15 @@
 *****
 ## numpy
 ***
+* 矩阵操作
+> - 全0矩阵 `np.zeros()`
+  - 全1矩阵 `np.ones([1, 4])`
+  - 填充矩阵 `np.full([2, 3], 1.2)`
+  - 随机矩阵 `np.empty([2, 3])`
+  - 单位矩阵(对角矩阵) `np.identity(3) / eye()`
+  - 对角矩阵(带偏移) `np.diagflat([1, 2, 3], k=1)`
+  - 下三角矩阵 `np.tri()`
+  - 范德蒙矩阵 `np.vander()`
+
 ## matplob
 ***
