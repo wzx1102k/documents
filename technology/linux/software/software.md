@@ -48,6 +48,7 @@
 ## atom
 
 #### atom install jupyter notebook package
+
 > - install node.js  npm  node-gyp
 
     - fix bug at line 34 In main.js at /home/$USER/.atom/packages/jupyter-notebook/lib
@@ -57,6 +58,7 @@
     - install jupyter notebook package
 
 ####  [conda使用不同版本python](https://conda.io/docs/user-guide/tasks/manage-python.html)
+
 ```       
         #step 1. create python env
         #py27 for python2.7
