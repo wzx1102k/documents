@@ -51,11 +51,11 @@
 
 > - install node.js  npm  node-gyp
 
-    - fix bug at line 34 In main.js at `/home/$USER/.atom/packages/jupyter-notebook/lib`
+- fix bug at line 34 In main.js at `/home/$USER/.atom/packages/jupyter-notebook/lib`
 
     参考[fix notebook bug](https://github.com/cloutiertyler/atom-notebook/commit/cf2ab0e66a8e7b470b7d88a03191bcaed477bf2a)
 
-    - install jupyter notebook package
+- install jupyter notebook package
 
 ####  [conda使用不同版本python](https://conda.io/docs/user-guide/tasks/manage-python.html)
 
