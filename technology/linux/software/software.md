@@ -42,4 +42,35 @@
 6. 使用 \[描述\]\(链接地址\) 为文字增加外链接。
 7. 使用 \`代码\` 表示行内代码块。
 8. 使用 一对\`\`\`区隔代码段
-9. 使用 \> \>> \>>>等段落缩进 
+9. 使用 \> \>> \>>>等段落缩进
+
+## conda、 node.js、npm
+
+> 1. [conda使用不同版本python](https://conda.io/docs/user-guide/tasks/manage-python.html)
+
+    ```
+        #step 1. create python env
+        #py27 for python2.7
+        conda create -n py27 python=2.7 anaconda
+        #py36 for python3.6
+        conda create -n python36 python=3.6 anaconda
+
+        #change default to python2.7   - activate py27
+        activate py27
+
+        #verify new env
+        conda info --envs
+        python --version
+ 
+    ```
+2. [node.js 是用来做什么的? ](https://www.zhihu.com/question/33578075)
+
+      一种javascript的运行环境， 能够使javascript 脱离浏览器运行
+
+3. [npm模块安装机制简介](http://www.ruanyifeng.com/blog/2016/01/npm-install.html)
+
+     npm 是node的模块管理器，通过npm install相关命令 就能安装别人写好的模块。
+
+4. [windows下安装node-gyp](https://www.jianshu.com/p/2b831714bbff)
+
+    gyp是一种根据c++源代码编译的工具， node-gyp是为node编译c++扩展时候使用的编译工具。

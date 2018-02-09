@@ -4,9 +4,13 @@
 ```
     apt-get update
     apt install vim
+    apt install terminator
     apt install python3-pip
+    apt install python3-tk
     pip3 install tensorflow
     pip3 install scipy
+    pip3 install matplotlib
+
 
     # 翻墙
     add-apt-repository ppa:hzwhuang/ss-qt5
@@ -41,10 +45,41 @@
 
 ```
 ****
+## conda
+
+参考[windows下安装node-gyp](https://www.jianshu.com/p/2b831714bbff)
+
+```
+conda install -c conda-forge nodejs
+conda install -c cpcloud npm
+npm install -g node-gyp
+apm -v
+```
+****
+
 ## .bashrc
 ```
     alias python='/usr/bin/python3.5'
 ```
+****
+## terminator
+参考[5分钟入手Terminator](https://www.jianshu.com/p/cee2de32ca28)
+****
+## vim配置
+> * vim 颜色配置
+  - 编辑.vimrc， 添加`set t_Co=256`
+  - 替换c.vim `cp c.vim /usr/share/vim/vim74/syntax/`
+****
+## atom 配置
+> * [atom配置视频](https://www.youtube.com/watch?v=DjEuROpsvp4)
+    - 勾选 Scroll Past End
+    -  
+* 如何在WIN10环境下ATOM中使用anaconda python lib?
+    - atom安装hydrogen package
+    - 命令行打开anaconda prompt
+    - 在anaconda prompt下执行atom
+    - 编写python脚本并执行
+
 ****
 ## git 配置
 
