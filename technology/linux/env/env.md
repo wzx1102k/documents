@@ -65,11 +65,13 @@ apm -v
 ## terminator
 参考[5分钟入手Terminator](https://www.jianshu.com/p/cee2de32ca28)
 ****
+
 ## vim配置
-> * vim 颜色配置
+>* vim 颜色配置
   - 编辑.vimrc， 添加`set t_Co=256`
   - 替换c.vim `cp c.vim /usr/share/vim/vim74/syntax/`
 ****
+
 ## atom 配置
 > * [atom配置视频](https://www.youtube.com/watch?v=DjEuROpsvp4)
     - 勾选 Scroll Past End
