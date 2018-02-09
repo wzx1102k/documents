@@ -87,3 +87,16 @@
 
     `npm install --global --production windows-build-tools`  (use python2.7 env)
 *****
+
+## jupyter notebook
+
+#### 使用jupyter notebook 制作slideshow
+
+参考[How to Create a Slideshow using Jupyter+Markdown+Reveal.js](https://www.youtube.com/watch?v=EOpcxy0RA1A)
+
+> -  shell open jupyter notebook
+- create new notebook in website
+- change view cell toolbar to slideshow and save
+- download reveal.js(`git clone https://github.com/hakimel/reveal.js.git`)
+- convert to html slideshow :  use `jupyter-nbconvert --to slides ml.ipynb --reveal-prefix=reveal.js`
+- open html slideshow in web
