@@ -91,9 +91,61 @@
 
 参考[How to Create a Slideshow using Jupyter+Markdown+Reveal.js](https://www.youtube.com/watch?v=EOpcxy0RA1A)
 
+参考[左手程序员，右手作家：你必须会的Jupyter Notebook](https://www.jianshu.com/p/86117613b7a6)
+
+参考[powerful reveal.js function](https://revealjs.com/?print-pdf#/)
+
 > -  shell open jupyter notebook
 - create new notebook in website
 - change view cell toolbar to slideshow and save
 - download reveal.js(`git clone https://github.com/hakimel/reveal.js.git`)
 - convert to html slideshow :  use `jupyter-nbconvert --to slides ml.ipynb --reveal-prefix=reveal.js`
 - open html slideshow in web
+- convert html  to pdf
+change
+`file:///D:/cloud/document/documents/ml/ml.slides.html#/` to
+`file:///D:/cloud/document/documents/ml/ml.slides.html?print-pdf#/`
+
+#### jupyter notebook 使用latex
+
+##### [latex官网](https://www.latex-project.org/)
+    LaTeX – A document preparation system    论文公式排版
+
+##### conda install latex
+    `conda install -c conda-forge miktex` (使用proxifier & ss  翻墙安装速度快)
+
+##### [How to write LaTeX in IPython Notebook?](https://stackoverflow.com/questions/13208286/how-to-write-latex-in-ipython-notebook)
+
+    use `%%latex`  in jupyter notebook cell
+
+#### [latex tutorial](https://www.youtube.com/watch?v=SoDv0qhyysQ)
+```
+\begin{algorithm}  
+\caption{Calculate $y = x^n$}   
+\label{alg1}  
+\begin{algorithmic}  
+\REQUIRE $n \geq 0 \vee x \neq 0$   
+\ENSURE $y = x^n$   
+\STATE $y \Leftarrow 1$   
+\IF{$n < 0$}   
+\STATE $X \Leftarrow 1 / x$   
+\STATE $N \Leftarrow -n$   
+\ELSE   
+\STATE $X \Leftarrow x$   
+\STATE $N \Leftarrow n$  
+\ENDIF   
+\WHILE{$N \neq 0$}   
+\IF{$N$ is even}   
+\STATE $X \Leftarrow X \times X$   
+\STATE $N \Leftarrow N / 2$   
+\ELSE[$N$ is odd]   
+\STATE $y \Leftarrow y \times X$   
+\STATE $N \Leftarrow N - 1$   
+\ENDIF   
+\ENDWHILE  
+\end{algorithmic}  
+\end{algorithm}  
+```
+![](latex.png)
+
+**************

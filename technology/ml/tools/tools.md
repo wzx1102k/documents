@@ -33,6 +33,8 @@
   - 对角矩阵(带偏移) `np.diagflat([1, 2, 3], k=1)`
   - 下三角矩阵 `np.tri()`
   - 范德蒙矩阵 `np.vander()`
+ - `np.sign(0)` 输出0， `np.sign(>0)`输出1， `np.sign(<0)` 输出-1
+  *
 
 ## matplob
 ***
