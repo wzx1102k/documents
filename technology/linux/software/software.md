@@ -112,13 +112,17 @@ change
     LaTeX – A document preparation system    论文公式排版
 
 ##### conda install latex
-    `conda install -c conda-forge miktex` (使用proxifier & ss  翻墙安装速度快)
+
+`conda install -c conda-forge miktex` (使用proxifier & ss  翻墙安装速度快)
 
 ##### [How to write LaTeX in IPython Notebook?](https://stackoverflow.com/questions/13208286/how-to-write-latex-in-ipython-notebook)
 
-    use `%%latex`  in jupyter notebook cell
+use `%%latex`  in jupyter notebook cell
 
 #### [latex tutorial](https://www.youtube.com/watch?v=SoDv0qhyysQ)
+
+ (markdown 只支持latex公式， 不支持排版)
+
 ```
 \begin{algorithm}  
 \caption{Calculate $y = x^n$}   
@@ -147,5 +151,8 @@ change
 \end{algorithm}  
 ```
 ![](latex.png)
+
+####[latex 公式速查手册](http://blog.leanote.com/post/aqzlpm11/Latex%E5%85%AC%E5%BC%8F%E7%BC%96%E8%BE%91%E6%89%8B%E5%86%8C)
+
 
 **************
