@@ -34,7 +34,9 @@
   - 下三角矩阵 `np.tri()`
   - 范德蒙矩阵 `np.vander()`
  - `np.sign(0)` 输出0， `np.sign(>0)`输出1， `np.sign(<0)` 输出-1
-  *
 
+ * 数值运算 axis = 0 表示列， axis = 1  表示行
+ > - np.mean(a, axis=0) # axis=0，计算每一列的均值  
+ > - np.linalg.norm(x, ord=None, axis=None, keepdims=False)   计算范数
 ## matplob
 ***
