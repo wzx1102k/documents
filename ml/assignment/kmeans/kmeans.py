@@ -1,14 +1,15 @@
 import numpy as np
 import matplotlib
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
+from sklearn.datasets.samples_generator import make_blobs
 
 DIMENSION = 2
 KNUM = 4
-LEN = 120
-LEN_2 = LEN//2
-LEN_4 = LEN//4
-LEN_4_3 = LEN_2 + LEN_4
-train_step = 5
+SAMPLE_CNT = 240
+SAMPLE_CNT_2 = SAMPLE_CNT//2
+SAMPLE_CNT_4 = SAMPLE_CNT//4
+SAMPLE_CNT_4_3 = SAMPLE_CNT_2 + SAMPLE_CNT_4
+train_step = 100
 
 
 def label_reset(x, kpoint):
@@ -34,14 +35,17 @@ def cal_total(x, kpoint, label):
         idx = np.where(label[:, 0] == i)
         _linalg = np.linalg.norm(x[idx] - kpoint[i], axis=1)
         _sum += np.sum(_linalg)
-    _sum /= LEN
+    _sum /= SAMPLE_CNT
     return _sum
 
+'''
 # x, y, label
-x = np.zeros((LEN, DIMENSION))
-x = np.random.randint(-20, 20, (LEN, DIMENSION))
+x = np.zeros((SAMPLE_CNT, DIMENSION))
+x = np.random.randint(-20, 20, (SAMPLE_CNT, DIMENSION))
+'''
+x, _ = make_blobs(n_samples=SAMPLE_CNT, n_features=DIMENSION, centers=KNUM, center_box=(-20, 20), cluster_std=1.5)
 
-label = np.zeros((LEN, 1))
+label = np.zeros((SAMPLE_CNT, 1))
 
 fig = plt.figure()
 ax = fig.add_subplot(1,1,1)

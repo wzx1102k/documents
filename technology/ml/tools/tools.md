@@ -23,7 +23,7 @@
 
 *****
 ## numpy
-***
+
 * 矩阵操作
 > - 全0矩阵 `np.zeros()`
   - 全1矩阵 `np.ones([1, 4])`
@@ -38,5 +38,60 @@
  * 数值运算 axis = 0 表示列， axis = 1  表示行
  > - np.mean(a, axis=0) # axis=0，计算每一列的均值  
  > - np.linalg.norm(x, ord=None, axis=None, keepdims=False)   计算范数
-## matplob
+****
+## matplotlib
+- matplotlib.pyplot
+    matplotlib.pyplot.gca  get current polar axes on the current figure `plt.gca()`
+
+****
+## sklearn
+
+- make_blob 生成聚类测试数据
+```
+from sklearn.datasets.samples_generator import make_blobs
+
+sklearn.datasets.make_blobs(n_samples=100, n_features=2, centers=3, cluster_std=1.0, center_box=(-10.0, 10.0), shuffle=True, random_state=None)[source]
+
+x, label = make_blobs(n_samples=SAMPLE_CNT, n_features=DIMENSION, centers=KNUM, center_box=(-10, 10))
+
+```
+- svc lib
+```
+class sklearn.svm.SVC(  
+    C=1.0,    larger values of C, smaller-margin hyperplane, less misclassifying
+    kernel=’rbf’,
+    degree=3,  Degree of the polynomial kernel function (‘poly’). Ignored by all other kernels.
+    gamma=’auto’,
+    coef0=0.0,
+    shrinking=True,
+    probability=False,
+    tol=0.001,  Tolerance for stopping criterion.
+    cache_size=200,
+    class_weight=None,
+    verbose=False,
+    max_iter=-1,
+    decision_function_shape=’ovr’,
+    random_state=None
+    )
+（1）C: 目标函数的惩罚系数C，用来平衡分类间隔margin和错分样本的，default C = 1.0；
+（2）kernel：参数选择有RBF, Linear, Poly, Sigmoid, 默认的是"RBF";
+（3）degree：if you choose 'Poly' in param 2, this is effective, degree决定了多项式的最高次幂；
+（4）gamma：核函数的系数('Poly', 'RBF' and 'Sigmoid'), 默认是gamma = 1 / n_features;
+（5）coef0：核函数中的独立项，'RBF' and 'Poly'有效；
+（6）probablity: 可能性估计是否使用(true or false)；
+（7）shrinking：是否进行启发式；
+（8）tol（default = 1e - 3）: svm结束标准的精度;
+（9）cache_size: 制定训练所需要的内存（以MB为单位）；
+（10）class_weight: 每个类所占据的权重，不同的类设置不同的惩罚参数C, 缺省的话自适应；
+（11）verbose: 跟多线程有关，不大明白啥意思具体；
+（12）max_iter: 最大迭代次数，default = 1， if max_iter = -1, no limited;
+（13）decision_function_shape ： ‘ovo’ 一对一, ‘ovr’ 多对多  or None 无, default=None
+（14）random_state ：用于概率估计的数据重排时的伪随机数生成器的种子。
+
+from sklearn.svm import SVC
+
+clf = SVC(decision_function_shape='ovo') #ovo为一对一  
+clf.fit(X,Y)  
+dec = clf.decision_function([[x, y]])    #返回的是样本距离超平面的距离
+```
 ***
