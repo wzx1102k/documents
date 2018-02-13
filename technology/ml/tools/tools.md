@@ -26,24 +26,24 @@
 
 - 矩阵操作
 
->- 全0矩阵 `np.zeros()`
->- 全1矩阵 `np.ones([1, 4])`
->- 填充矩阵 `np.full([2, 3], 1.2)`
->- 随机矩阵 `np.empty([2, 3])`
->- 单位矩阵(对角矩阵) `np.identity(3) / eye()`
->- 对角矩阵(带偏移) `np.diagflat([1, 2, 3], k=1)`
->- 下三角矩阵 `np.tri()`
->- 范德蒙矩阵 `np.vander()`
->- `np.sign(0)` 输出0， `np.sign(>0)`输出1， `np.sign(<0)` 输出-1
+> - 全0矩阵 `np.zeros()`
+> - 全1矩阵 `np.ones([1, 4])`
+> - 填充矩阵 `np.full([2, 3], 1.2)`
+> - 随机矩阵 `np.empty([2, 3])`
+> - 单位矩阵(对角矩阵) `np.identity(3) / eye()`
+> - 对角矩阵(带偏移) `np.diagflat([1, 2, 3], k=1)`
+> - 下三角矩阵 `np.tri()`
+> - 范德蒙矩阵 `np.vander()`
+> - `np.sign(0)` 输出0， `np.sign(>0)`输出1， `np.sign(<0)` 输出-1
 
- - 数值运算 axis = 0 表示列， axis = 1  表示行
+- 数值运算 axis = 0 表示列， axis = 1  表示行
 
- >- np.mean(a, axis=0) # axis=0，计算每一列的均值  
- >- np.linalg.norm(x, ord=None, axis=None, keepdims=False)   计算范数
+> - np.mean(a, axis=0) # axis=0，计算每一列的均值  
+> - np.linalg.norm(x, ord=None, axis=None, keepdims=False)   计算范数
 ****
 ## matplotlib
-- matplotlib.pyplot
-    matplotlib.pyplot.gca  get current polar axes on the current figure `plt.gca()`
+- matplotlib.pyplot.gca
+    use `plt.gca()`  to get current polar axes on the current figure.
 
 ****
 ## sklearn
