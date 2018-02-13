@@ -34,7 +34,6 @@
   - 下三角矩阵 `np.tri()`
   - 范德蒙矩阵 `np.vander()`
  - `np.sign(0)` 输出0， `np.sign(>0)`输出1， `np.sign(<0)` 输出-1
-
  * 数值运算 axis = 0 表示列， axis = 1  表示行
  > - np.mean(a, axis=0) # axis=0，计算每一列的均值  
  > - np.linalg.norm(x, ord=None, axis=None, keepdims=False)   计算范数
@@ -47,6 +46,7 @@
 ## sklearn
 
 - make_blob 生成聚类测试数据
+
 ```
 from sklearn.datasets.samples_generator import make_blobs
 
@@ -55,7 +55,9 @@ sklearn.datasets.make_blobs(n_samples=100, n_features=2, centers=3, cluster_std=
 x, label = make_blobs(n_samples=SAMPLE_CNT, n_features=DIMENSION, centers=KNUM, center_box=(-10, 10))
 
 ```
+
 - svc lib
+
 ```
 class sklearn.svm.SVC(  
     C=1.0,    larger values of C, smaller-margin hyperplane, less misclassifying
