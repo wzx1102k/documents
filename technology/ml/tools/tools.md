@@ -24,19 +24,22 @@
 *****
 ## numpy
 
-* 矩阵操作
-> - 全0矩阵 `np.zeros()`
-  - 全1矩阵 `np.ones([1, 4])`
-  - 填充矩阵 `np.full([2, 3], 1.2)`
-  - 随机矩阵 `np.empty([2, 3])`
-  - 单位矩阵(对角矩阵) `np.identity(3) / eye()`
-  - 对角矩阵(带偏移) `np.diagflat([1, 2, 3], k=1)`
-  - 下三角矩阵 `np.tri()`
-  - 范德蒙矩阵 `np.vander()`
- - `np.sign(0)` 输出0， `np.sign(>0)`输出1， `np.sign(<0)` 输出-1
- * 数值运算 axis = 0 表示列， axis = 1  表示行
- > - np.mean(a, axis=0) # axis=0，计算每一列的均值  
- > - np.linalg.norm(x, ord=None, axis=None, keepdims=False)   计算范数
+- 矩阵操作
+
+>- 全0矩阵 `np.zeros()`
+>- 全1矩阵 `np.ones([1, 4])`
+>- 填充矩阵 `np.full([2, 3], 1.2)`
+>- 随机矩阵 `np.empty([2, 3])`
+>- 单位矩阵(对角矩阵) `np.identity(3) / eye()`
+>- 对角矩阵(带偏移) `np.diagflat([1, 2, 3], k=1)`
+>- 下三角矩阵 `np.tri()`
+>- 范德蒙矩阵 `np.vander()`
+>- `np.sign(0)` 输出0， `np.sign(>0)`输出1， `np.sign(<0)` 输出-1
+
+ - 数值运算 axis = 0 表示列， axis = 1  表示行
+
+ >- np.mean(a, axis=0) # axis=0，计算每一列的均值  
+ >- np.linalg.norm(x, ord=None, axis=None, keepdims=False)   计算范数
 ****
 ## matplotlib
 - matplotlib.pyplot
@@ -50,10 +53,22 @@
 ```
 from sklearn.datasets.samples_generator import make_blobs
 
-sklearn.datasets.make_blobs(n_samples=100, n_features=2, centers=3, cluster_std=1.0, center_box=(-10.0, 10.0), shuffle=True, random_state=None)[source]
+sklearn.datasets.make_blobs(
+            n_samples=100,
+            n_features=2,
+            centers=3,
+            cluster_std=1.0,
+            center_box=(-10.0, 10.0),
+            shuffle=True,
+             random_state=None
+)
 
-x, label = make_blobs(n_samples=SAMPLE_CNT, n_features=DIMENSION, centers=KNUM, center_box=(-10, 10))
-
+x, label = make_blobs(
+    n_samples=SAMPLE_CNT,
+    n_features=DIMENSION,
+    centers=KNUM,
+    center_box=(-10, 10)
+)
 ```
 
 - svc lib
@@ -75,21 +90,23 @@ class sklearn.svm.SVC(
     decision_function_shape=’ovr’,
     random_state=None
     )
-（1）C: 目标函数的惩罚系数C，用来平衡分类间隔margin和错分样本的，default C = 1.0；
-（2）kernel：参数选择有RBF, Linear, Poly, Sigmoid, 默认的是"RBF";
-（3）degree：if you choose 'Poly' in param 2, this is effective, degree决定了多项式的最高次幂；
-（4）gamma：核函数的系数('Poly', 'RBF' and 'Sigmoid'), 默认是gamma = 1 / n_features;
-（5）coef0：核函数中的独立项，'RBF' and 'Poly'有效；
-（6）probablity: 可能性估计是否使用(true or false)；
-（7）shrinking：是否进行启发式；
-（8）tol（default = 1e - 3）: svm结束标准的精度;
-（9）cache_size: 制定训练所需要的内存（以MB为单位）；
-（10）class_weight: 每个类所占据的权重，不同的类设置不同的惩罚参数C, 缺省的话自适应；
-（11）verbose: 跟多线程有关，不大明白啥意思具体；
-（12）max_iter: 最大迭代次数，default = 1， if max_iter = -1, no limited;
-（13）decision_function_shape ： ‘ovo’ 一对一, ‘ovr’ 多对多  or None 无, default=None
-（14）random_state ：用于概率估计的数据重排时的伪随机数生成器的种子。
+```
+>- C: 目标函数的惩罚系数C，用来平衡分类间隔margin和错分样本的，default C = 1.0；
+>- kernel：参数选择有RBF, Linear, Poly, Sigmoid, 默认的是"RBF";
+>- degree：if you choose 'Poly' in param 2, this is effective, degree决定了多项式的最高次幂；
+>- gamma：核函数的系数('Poly', 'RBF' and 'Sigmoid'), 默认是gamma = 1 / n_features;
+>- coef0：核函数中的独立项，'RBF' and 'Poly'有效；
+>- probablity: 可能性估计是否使用(true or false)；
+>- shrinking：是否进行启发式；
+>- tol（default = 1e - 3）: svm结束标准的精度;
+>- cache_size: 制定训练所需要的内存（以MB为单位）；
+>- class_weight: 每个类所占据的权重，不同的类设置不同的惩罚参数C, 缺省的话自适应；
+>- verbose: 跟多线程有关，不大明白啥意思具体；
+>- max_iter: 最大迭代次数，default = 1， if max_iter = -1, no limited;
+>- decision_function_shape ： ‘ovo’ 一对一, ‘ovr’ 多对多  or None 无, default=None
+>- random_state ：用于概率估计的数据重排时的伪随机数生成器的种子。
 
+```
 from sklearn.svm import SVC
 
 clf = SVC(decision_function_shape='ovo') #ovo为一对一  
