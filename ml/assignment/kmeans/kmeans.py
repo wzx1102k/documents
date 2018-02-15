@@ -6,9 +6,6 @@ from sklearn.datasets.samples_generator import make_blobs
 DIMENSION = 2
 KNUM = 4
 SAMPLE_CNT = 240
-SAMPLE_CNT_2 = SAMPLE_CNT//2
-SAMPLE_CNT_4 = SAMPLE_CNT//4
-SAMPLE_CNT_4_3 = SAMPLE_CNT_2 + SAMPLE_CNT_4
 train_step = 100
 
 

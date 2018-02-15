@@ -18,8 +18,26 @@
 * mnist 数据集合 image 是有做过正则化的    
 参考[数据预处理](http://ufldl.stanford.edu/wiki/index.php/%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86)
 在处理自然图像时，我们获得的像素值在 [0,255] 区间中，常用的处理是将这些像素值除以 255，使它们缩放到 [0,1] 中.
+
 * tf.clip_by_value(A, min, max)    
 输入一个张量A，把A中的每一个元素的值都压缩在min和max之间。小于min的让它等于min，大于max的元素的值等于max。
+
+* [What's the difference between softmax and softmax_cross_entropy_with_logits?
+](https://stackoverflow.com/questions/34240703/whats-the-difference-between-softmax-and-softmax-cross-entropy-with-logits)
+
+softmax:  需要额外写loss function
+
+```
+predict = tf.nn.softmax(tf.add(tf.matmul(x, W),  b))
+loss = tf.reduce_mean(-tf.reduce_sum(y_true * tf.log(predict), [1]))
+```
+softmax_cross_entropy_with_logit  计算softmax 以及交叉熵(loss)
+
+```
+predict = tf.add(tf.matmul(x, W),  b)
+loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(predict, y_true))
+```
+
 
 *****
 ## numpy
@@ -35,15 +53,30 @@
 > - 下三角矩阵 `np.tri()`
 > - 范德蒙矩阵 `np.vander()`
 > - `np.sign(0)` 输出0， `np.sign(>0)`输出1， `np.sign(<0)` 输出-1
+> 合并列矩阵  `np.vstack((a,b))` ,合并行矩阵  `np.hstack((a,b))`
 
 - 数值运算 axis = 0 表示列， axis = 1  表示行
 
 > - np.mean(a, axis=0) # axis=0，计算每一列的均值  
-> - np.linalg.norm(x, ord=None, axis=None, keepdims=False)   计算范数
+> - np.linalg.norm(x, ord=None, axis=None, keepdims=False)   计算范数， 默认二范数 求欧式距离/向量内积
+> - `np.shape` 求矩阵大小,  `np.shape[0]` 求行大小, `np.shape[1]` 求列大小
+
 ****
 ## matplotlib
 - matplotlib.pyplot.gca
     use `plt.gca()`  to get current polar axes on the current figure.
+
+- 不同颜色线条进行标注
+
+```
+import matplotlib.patches as mpatches
+import matplotlib.pyplot as plt
+
+rbf_label = mpatches.Patch(color='b', label='rbf')
+poly_label = mpatches.Patch(color='r', label='poly')
+plt.legend(handles=[rbf_label, poly_label])
+plt.show()
+```
 
 ****
 ## sklearn
@@ -76,7 +109,7 @@ x, label = make_blobs(
 ```
 class sklearn.svm.SVC(  
     C=1.0,    larger values of C, smaller-margin hyperplane, less misclassifying
-    kernel=’rbf’,
+    kernel=’rbf’, ‘linear’, ‘poly’, ‘rbf’, ‘sigmoid’, ‘precomputed’
     degree=3,  Degree of the polynomial kernel function (‘poly’). Ignored by all other kernels.
     gamma=’auto’,
     coef0=0.0,
