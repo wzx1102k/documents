@@ -52,7 +52,6 @@ nginx   2012  www    6u  IPv4 423446322      0t0  TCP *:http (LISTEN)
     I/O size (minimum/optimal): 512 bytes / 512 bytes
     Disklabel type: dos
     Disk identifier: 0x8971d5ea
-
     Device     Boot     Start       End   Sectors Size Id Type
     /dev/sda1  *         2048 119539711 119537664  57G 83 Linux
     /dev/sda2       119541758 125827071   6285314   3G  5 Extended
