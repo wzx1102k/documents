@@ -1,5 +1,5 @@
 # 机器学习常用tool总结
-
+*******
 ## tensorflow
 
 * tensorflow Introduce
@@ -26,13 +26,11 @@
 ](https://stackoverflow.com/questions/34240703/whats-the-difference-between-softmax-and-softmax-cross-entropy-with-logits)
 
     - softmax:  需要额外写loss function
-
 ```
 predict = tf.nn.softmax(tf.add(tf.matmul(x, W),  b))
 loss = tf.reduce_mean(-tf.reduce_sum(y_true * tf.log(predict), [1]))
 ```
     - softmax_cross_entropy_with_logit  计算softmax 以及交叉熵(loss)
-
 ```
 predict = tf.add(tf.matmul(x, W),  b)
 loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=predict, labels=y_true))
