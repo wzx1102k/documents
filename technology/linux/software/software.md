@@ -196,4 +196,6 @@ use `%%latex`  in jupyter notebook cell
 
     + 微信公众平台->开发->基本配置->服务器配置绑定域名和token (token 和服务器code中设置保持一致)
 
-    + 通过微信发送测试文本/图片致公众号进行测试，如提示"该公众号提供的服务出现故障"等内容， 使用[微信接口告警](https://mp.weixin.qq.com/advanced/advanced?action=alarm&t=advanced/alarm&token=1322591627&lang=zh_CN)来调试故障。
+    + 通过微信发送测试文本/图片致公众号进行测试，如提示"该公众号提供的服务出现故障"等内容，可使用如下工具调试。
+        * [微信接口告警](https://mp.weixin.qq.com/advanced/advanced?action=alarm&t=advanced/alarm&token=1322591627&lang=zh_CN)
+        * [微信公众平台接口调试工具](https://mp.weixin.qq.com/debug/)
