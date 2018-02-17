@@ -22,3 +22,12 @@ COMMAND   PID   USER   FD   TYPE DEVICE SIZE/OFF  NODE NAME
 cheese  31526 kirill  mem    CHR   81,0          18321 /dev/video0
 cheese  31526 kirill   23u   CHR   81,0      0t0 18321 /dev/video0
 ```
+
+查看端口号占用情况(eg. Port80)
+
+```
+[root@localhost www.wzx1102k.com]# lsof -i:80
+COMMAND  PID USER   FD   TYPE    DEVICE SIZE/OFF NODE NAME
+nginx   1449 root    6u  IPv4 423446322      0t0  TCP *:http (LISTEN)
+nginx   2012  www    6u  IPv4 423446322      0t0  TCP *:http (LISTEN)
+```

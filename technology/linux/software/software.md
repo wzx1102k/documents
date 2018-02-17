@@ -152,7 +152,48 @@ use `%%latex`  in jupyter notebook cell
 ```
 ![](latex.png)
 
-####[latex 公式速查手册](http://blog.leanote.com/post/aqzlpm11/Latex%E5%85%AC%E5%BC%8F%E7%BC%96%E8%BE%91%E6%89%8B%E5%86%8C)
+#### [latex 公式速查手册](http://blog.leanote.com/post/aqzlpm11/Latex%E5%85%AC%E5%BC%8F%E7%BC%96%E8%BE%91%E6%89%8B%E5%86%8C)
 
+#### [latex搭配MathType](https://zhuanlan.zhihu.com/p/32471851)
+
+- MathType 6.9+ 编辑公式， 预置->剪切和复制预置->MathML 或Tex, 记住取消勾选后面的两个方框,然后点击“确定”， 得到latex 公式代码
 
 **************
+
+#### 域名服务器后台搭建及和微信公众号之间的通信
+
+- godaddy + dnspod + vps 搭建web blog
+    + godaddy 申请域名 `www.wzx1102k.com`
+    + dnspod 添加VPS IP 和域名的映射， 添加 `www A` 和`@ A`
+    + godaddy 添加dnspod  DNS解析服务器 `f1g1ns1.dnspod.net` 和 `f1g1ns2.dnspod.net`
+    + 测试是否绑定成功， 命令行`ping www.wzx1102k.com`，无丢失则映射成功
+    + VPS上一键安装SQL、PHP SERVER， 持续20分钟左右
+    + VPS配置域名和DB  `lnmp vhost add`
+    + 通过Filezilla 上传wordpress 安装包(或服务器上直接下载)， 内容直接解压到 `www.wzx1102k.com`
+    + 通过访问`www.wzx1102k.com` 来一步步使用wordpress配置blog
+
+    ```
+    wget -c http://soft.vpser.net/lnmp/lnmp1.2-full.tar.gz && tar zxf lnmp1.2-full.tar.gz && cd lnmp1.2-full && ./install.sh lnmp
+    ```
+
+    参考[VPS+LNMP+WordPress搭建个人网站/博客](http://jwcyber.com/build-site/)
+
+- 微信公众号 + VPS服务器配置
+    + VPS域名配置参照godaddy配置blog方案
+    + 安装webpy和python-lxml
+
+    ```
+        git clone git://github.com/webpy/webpy.git
+        ln -s `pwd`/webpy/web
+        cd /root/webpy
+        sudo python setup.py install
+        sudo apt-get install python-lxml
+    ```
+
+    + 编写服务器get/post  python code，路径放置在之前创建好的域名目录下(`/home/wwwroot/www.wzx1102k.com`)
+
+    参考[微信公众平台入门指引](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1472017492_58YV5)
+
+    + 微信公众平台->开发->基本配置->服务器配置绑定域名和token (token 和服务器code中设置保持一致)
+
+    + 通过微信发送测试文本/图片致公众号进行测试，如提示"该公众号提供的服务出现故障"等内容， 使用[微信接口告警](https://mp.weixin.qq.com/advanced/advanced?action=alarm&t=advanced/alarm&token=1322591627&lang=zh_CN)来调试故障。
