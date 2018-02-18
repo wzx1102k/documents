@@ -44,18 +44,6 @@ nginx   2012  www    6u  IPv4 423446322      0t0  TCP *:http (LISTEN)
     none            256M     0  256M   0% /dev/shm
     ```
     + 查看物理硬盘
-    
-    ```
-    root@ubuntu:/home/cloud/workspace/project/documents# fdisk -l
-    Disk /dev/sda: 60 GiB, 64424509440 bytes, 125829120 sectors
-    Units: sectors of 1 * 512 = 512 bytes
-    Sector size (logical/physical): 512 bytes / 512 bytes
-    I/O size (minimum/optimal): 512 bytes / 512 bytes
-    Disklabel type: dos
-    Disk identifier: 0x8971d5ea
-    Device     Boot     Start       End   Sectors Size Id Type
-    /dev/sda1  *         2048 119539711 119537664  57G 83 Linux
-    /dev/sda2       119541758 125827071   6285314   3G  5 Extended
-    /dev/sda5       119541760 125827071   6285312   3G 82 Linux swap / Solaris
-    ```
+
+
 ********************
