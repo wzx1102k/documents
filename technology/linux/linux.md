@@ -5,13 +5,10 @@ linux相关总结
 
 ```bash
 E: Could not get lock /var/lib/dpkg/lock - open (11 Resource temporarily unavailable)
-
 E: Unable to lock the administration directory (/var/lib/dpkg/) is another process using it?
 
 sudo rm /var/lib/apt/lists/lock
-
 sudo rm /var/cache/apt/archives/lock
-
 sudo rm /var/lib/dpkg/lock
 ```
 - lsof

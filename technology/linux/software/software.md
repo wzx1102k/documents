@@ -199,3 +199,41 @@ use `%%latex`  in jupyter notebook cell
     + 通过微信发送测试文本/图片致公众号进行测试，如提示"该公众号提供的服务出现故障"等内容，可使用如下工具调试。
         * [微信接口告警](https://mp.weixin.qq.com/advanced/advanced?action=alarm&t=advanced/alarm&token=1322591627&lang=zh_CN)
         * [微信公众平台接口调试工具](https://mp.weixin.qq.com/debug/)
+
+## google cloud
+
+#### colab use google gpu
+
+参考 [想免费用谷歌资源训练神经网络？Colab 详细使用教程 —— Jinkey 原创](https://zhuanlan.zhihu.com/p/33125415)
+[薅资本主义羊毛，用Google免费GPU](https://zhuanlan.zhihu.com/p/33344222)
+
++ 在google云端硬盘更多中添加colaboratory应用
++ 新建colaboratory笔记本(.ipynb)
++ 连接到申请的免费google cloud (300$/年)， 输入验证token key
+
+```
+!apt-get install -y -qq software-properties-common python-software-properties module-init-tools
+!add-apt-repository -y ppa:alessandro-strada/ppa 2>&1 > /dev/null
+!apt-get update -qq 2>&1 > /dev/null
+!apt-get -y install -qq google-drive-ocamlfuse fuse
+from google.colab import auth
+auth.authenticate_user()
+from oauth2client.client import GoogleCredentials
+creds = GoogleCredentials.get_application_default()
+import getpass
+!google-drive-ocamlfuse -headless -id={creds.client_id} -secret={creds.client_secret} < /dev/null 2>&1 | grep URL
+vcode = getpass.getpass()
+!echo {vcode} | google-drive-ocamlfuse -headless -id={creds.client_id} -secret={creds.client_secret}
+```
+
++ 将google云端硬盘链接到google cloud
+
+```
+!mkdir -p drive
+!google-drive-ocamlfuse drive
+```
++ 查看google cloud gpu 设备是否可以使用
+```
+from tensorflow.python.client import device_lib
+device_lib.list_local_devices()
+```

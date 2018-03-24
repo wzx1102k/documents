@@ -25,7 +25,7 @@ class sklearn.svm.SVC(
 （8）tol（default = 1e - 3）: svm结束标准的精度; 
 （9）cache_size: 制定训练所需要的内存（以MB为单位）； 
 （10）class_weight: 每个类所占据的权重，不同的类设置不同的惩罚参数C, 缺省的话自适应； 
-（11）verbose: 跟多线程有关，不大明白啥意思具体； 
+（11）verbose: 跟多线程有关； 
 （12）max_iter: 最大迭代次数，default = 1， if max_iter = -1, no limited; 
 （13）decision_function_shape ： ‘ovo’ 一对一, ‘ovr’ 多对多  or None 无, default=None 
 （14）random_state ：用于概率估计的数据重排时的伪随机数生成器的种子。
