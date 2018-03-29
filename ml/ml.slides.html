@@ -11923,7 +11923,25 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="ml_mindmap.jpg" alt=""></p>
+<p><img src="mlmindmap.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="ml_people.jpg" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="ml_relation.jpg" alt=""></p>
 
 </div>
 </div>
@@ -12839,7 +12857,26 @@ goiIBPx/hR7Jto2dV2kAAAAASUVORK5CYII=
 <p><strong>评价方法</strong> : $\mathop {\min }\limits_{w,b} (\frac{1}{2}||w|{|^2}) + C\sum\limits_{i = 1}^m {\max (0,1 - {y_i}({w^T}{x_i}{\rm{ + }}b))}$</p>
 <blockquote><p><em>s.t.</em> ${y_i}(w{x_{_i}} + b) - 1 \ge 0,i = 1,2,...,N$</p>
 </blockquote>
-<p><strong>优化方法</strong> : 核技巧/SMO</p>
+<p><strong>优化方法</strong> : 核技巧/SMO
+<img src="svm.jpg" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="-&#26680;&#25216;&#24039;-"><center> &#26680;&#25216;&#24039; </center><a class="anchor-link" href="#-&#26680;&#25216;&#24039;-">&#182;</a></h1><p><strong>核函数是二元函数，输入是变换之前的两个向量，其输出与两个向量变换之后的内积相等. $k({x_1},{x_2}) = f(x_1^T{x_2})$ </strong></p>
+<hr>
+<ul>
+<li>定义直线 $y(x) = {w^T}x + b$</li>
+<li>任意点${x_0}$到直线的距离为$\frac{1}{{||w||}}({w^T}{x_0} + b)$</li>
+<li>求在误分类最少的情况下的最大间距: $\arg \mathop {\max }\limits_{w,b} \{ \frac{1}{{||w||}}\mathop {\min }\limits_n [{y_i}({w^T}{x_i} + b)]\} $</li>
+<li>最大间距对偶形式：$\arg \mathop {\max }\limits_\alpha  \sum\limits_{i = 1}^N {{\alpha _i} - \frac{1}{2}\sum\limits_{i = 1}^N {\sum\limits_{j = 1}^N {{y_i}{y_j}} } } {\alpha _i}{\alpha _j}\langle {x_i},{x_{_j}}\rangle$
+<img src="svm_kernel.jpg" alt="">
+<img src="核函数.png" alt=""></li>
+</ul>
 
 </div>
 </div>
@@ -12937,6 +12974,106 @@ SVC(C=1000.0, cache_size=200, class_weight=None, coef0=0.0,
 </div>
 </div>
 </div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="bp.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="node.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="multi-node.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="active_function.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="activation.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="loss.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="-Gradient-Descent-"><center> Gradient Descent </center><a class="anchor-link" href="#-Gradient-Descent-">&#182;</a></h1><p><img src="gradient_descent.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="-${\theta-_{\rm{j}}}-=-{\theta-_j}---\alpha-\frac{\partial-}{{\partial-{\theta-_j}}}J(\theta-)$-"><center> ${\theta _{\rm{j}}} = {\theta _j} - \alpha \frac{\partial }{{\partial {\theta _j}}}J(\theta )$ </center><a class="anchor-link" href="#-${\theta-_{\rm{j}}}-=-{\theta-_j}---\alpha-\frac{\partial-}{{\partial-{\theta-_j}}}J(\theta-)$-">&#182;</a></h1><p><img src="_gradient_descent.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="-Backpropagation-"><center> Backpropagation </center><a class="anchor-link" href="#-Backpropagation-">&#182;</a></h1><p><img src="backprop.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="sigmoid_backprop.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="-Gradient-Descent&#21508;&#31639;&#27861;&#23545;&#27604;-"><center> Gradient Descent&#21508;&#31639;&#27861;&#23545;&#27604; </center><a class="anchor-link" href="#-Gradient-Descent&#21508;&#31639;&#27861;&#23545;&#27604;-">&#182;</a></h1><p><a href="https://zhuanlan.zhihu.com/p/32230623">https://zhuanlan.zhihu.com/p/32230623</a></p>
+<p><img src="_adag.gif" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
@@ -12995,8 +13132,38 @@ SVC(C=1000.0, cache_size=200, class_weight=None, coef0=0.0,
 <span class="c1">#predict = tf.nn.softmax(tf.matmul(o2_drop, W3) + bias3)</span>
 <span class="n">o3</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">o2_drop</span><span class="p">,</span> <span class="n">W3</span><span class="p">)</span> <span class="o">+</span> <span class="n">bias3</span>
 <span class="n">predict</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">o3</span><span class="p">)</span>
+</pre></div>
 
-<span class="c1"># loss  sum( y*log(predict) )</span>
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>D:\cloud\anaconda\lib\site-packages\h5py\__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># loss  sum( y*log(predict) )</span>
 <span class="n">loss</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_mean</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">softmax_cross_entropy_with_logits</span><span class="p">(</span><span class="n">logits</span><span class="o">=</span><span class="n">o3</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">ys</span><span class="p">))</span>
 <span class="c1">#loss = tf.reduce_mean(-tf.reduce_sum(ys*tf.log(predict), reduction_indices=[1]))</span>
 
@@ -13029,20 +13196,8 @@ SVC(C=1000.0, cache_size=200, class_weight=None, coef0=0.0,
 <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>D:\cloud\anaconda\lib\site-packages\h5py\__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
-  from ._conv import register_converters as _register_converters
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>WARNING:tensorflow:From &lt;ipython-input-1-f07e6545bb47&gt;:56: softmax_cross_entropy_with_logits (from tensorflow.python.ops.nn_ops) is deprecated and will be removed in a future version.
+<pre>WARNING:tensorflow:From &lt;ipython-input-2-cd5c0946c093&gt;:2: softmax_cross_entropy_with_logits (from tensorflow.python.ops.nn_ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 
 Future major versions of TensorFlow will allow gradients to flow
@@ -13050,26 +13205,26 @@ into the labels input on backprop by default.
 
 See tf.nn.softmax_cross_entropy_with_logits_v2.
 
-9.013017
-6.49734
-4.688036
-3.5733612
-2.7522929
-2.1041882
-1.5808904
-1.2115903
-0.93266517
-0.73520064
-0.61183685
-0.5383428
-0.49589163
-0.47452718
-0.4646661
-0.46033302
-0.45716488
-0.45751208
-0.45871666
-0.46209347
+2.0771701
+1.4298545
+1.2080476
+1.062615
+0.9569904
+0.8710387
+0.8117963
+0.7671517
+0.7361572
+0.71022105
+0.6842088
+0.6632282
+0.6432349
+0.63005894
+0.6273728
+0.6227281
+0.6168578
+0.61016667
+0.60824126
+0.60349876
 </pre>
 </div>
 </div>
@@ -13257,7 +13412,7 @@ See tf.nn.softmax_cross_entropy_with_logits_v2.
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -13316,8 +13471,19 @@ See tf.nn.softmax_cross_entropy_with_logits_v2.
 <span class="nb">sum</span> <span class="o">=</span> <span class="n">cal_total</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">kpoint</span><span class="p">,</span> <span class="n">label</span><span class="p">)</span>
 <span class="n">sum_min</span> <span class="o">=</span> <span class="nb">sum</span>
 <span class="n">delta</span> <span class="o">=</span> <span class="nb">sum</span>
+</pre></div>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">train_step</span><span class="p">):</span>
+</div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">train_step</span><span class="p">):</span>
     <span class="n">kpoint</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="p">(</span><span class="n">KNUM</span><span class="p">,</span> <span class="n">DIMENSION</span><span class="p">))</span>
     <span class="n">label</span> <span class="o">=</span> <span class="n">label_reset</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">kpoint</span><span class="p">)</span>
     <span class="nb">sum</span> <span class="o">=</span> <span class="n">cal_total</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">kpoint</span><span class="p">,</span> <span class="n">label</span><span class="p">)</span>
@@ -13351,8 +13517,8 @@ See tf.nn.softmax_cross_entropy_with_logits_v2.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Update sum_min: 1.578084
-Update sum_min: 1.578084
+<pre>Update sum_min: 1.833920
+Update sum_min: 1.833920
 </pre>
 </div>
 </div>
@@ -13377,9 +13543,7 @@ D:\cloud\anaconda\lib\site-packages\numpy\core\_methods.py:73: RuntimeWarning: i
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Update sum_min: 1.577934
-Update sum_min: 1.577856
-1.5780844366637838
+<pre>1.8339197144463897
 </pre>
 </div>
 </div>
@@ -13396,7 +13560,7 @@ Update sum_min: 1.577856
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -13417,24 +13581,654 @@ Update sum_min: 1.577856
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-[LeNet&#12289;AlexNet&#12289;GoogLeNet&#12289;VGG&#12289;ResNet](http://www.cnblogs.com/52machinelearning/p/5821591.html)-"><center> [LeNet&#12289;AlexNet&#12289;GoogLeNet&#12289;VGG&#12289;ResNet](http://www.cnblogs.com/52machinelearning/p/5821591.html) </center><a class="anchor-link" href="#-[LeNet&#12289;AlexNet&#12289;GoogLeNet&#12289;VGG&#12289;ResNet](http://www.cnblogs.com/52machinelearning/p/5821591.html)-">&#182;</a></h1><p><img src="net比较.png" alt=""></p>
+<h1 id="-Convolution-"><center> Convolution </center><a class="anchor-link" href="#-Convolution-">&#182;</a></h1><p>翻转-&gt;移动-&gt;乘积-&gt;求和</p>
+<p>$f[x,y]*g[x,y] = \sum\limits_{{n_1} =  - \infty }^\infty  {\sum\limits_{{n_2} =  - \infty }^\infty  {f[{n_1},{n_2}]\bullet g[x - {n_1},y - {n_2}]} }$
+<img src="conv.gif" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">cv2</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">img</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">20</span><span class="p">,:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">255</span>
+<span class="n">img</span><span class="p">[</span><span class="mi">20</span><span class="p">:</span><span class="mi">40</span><span class="p">,:,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">255</span>
+<span class="n">img</span><span class="p">[</span><span class="mi">40</span><span class="p">:</span><span class="mi">100</span><span class="p">,:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">255</span>
+<span class="n">img</span><span class="p">[</span><span class="mi">60</span><span class="p">:</span><span class="mi">80</span><span class="p">,:,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">255</span>
+<span class="n">img</span><span class="p">[</span><span class="mi">80</span><span class="p">:</span><span class="mi">100</span><span class="p">,:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">255</span>
+
+<span class="n">prewitt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+          <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+          <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">filter2D</span><span class="p">(</span><span class="n">img</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">prewitt</span><span class="p">)</span>
+<span class="n">regular</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">img</span><span class="p">[</span><span class="mi">19</span><span class="p">:</span><span class="mi">22</span><span class="p">,</span><span class="mi">19</span><span class="p">:</span><span class="mi">22</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">regular</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
 
 </div>
 </div>
 </div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[255. 255. 255.]
+ [  1.   1.   1.]
+ [  1.   1.   1.]]
+-762.0
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-Q-Learning-"><center> Q-Learning </center><a class="anchor-link" href="#-Q-Learning-">&#182;</a></h1><hr>
-<p><strong>任务</strong> : 对线性/非线性可分不同类别的点进行多分类</p>
-<hr>
-<p><strong>类型</strong> : 监督学习</p>
-<p><strong>模型</strong> : 四层nn , output layer : ${y_i} = \frac{{{e^{w{x_n} + b}}}}{{\sum\limits_{i = 1}^C {{e^{w{x_i} + b}}} }}$</p>
-<p><strong>评价方法</strong> : $\mathop {\min }\limits_{w,b} (\frac{1}{2}||w|{|^2}) + C\sum\limits_{i = 1}^m {\max (0,1 - {y_i}({w^T}{x_i}{\rm{ + }}b))}$</p>
-<blockquote><p><em>s.t.</em> ${y_i}(w{x_{_i}} + b) - 1 \ge 0,i = 1,2,...,N$</p>
-</blockquote>
-<p><strong>优化方法</strong> : Gradient Descent/SGD/ADAM/Adagrad/RMSprop</p>
+<h1 id="-LeNet&#12289;AlexNet&#12289;GoogLeNet&#12289;VGG&#12289;ResNet-"><center> LeNet&#12289;AlexNet&#12289;GoogLeNet&#12289;VGG&#12289;ResNet </center><a class="anchor-link" href="#-LeNet&#12289;AlexNet&#12289;GoogLeNet&#12289;VGG&#12289;ResNet-">&#182;</a></h1><p><img src="net比较.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="alex_net.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="vgg16_para.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="asamples.gif" alt=""> <img src="a384.gif" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="-Mask-R-CNN-Segment-"><center> Mask R-CNN Segment </center><a class="anchor-link" href="#-Mask-R-CNN-Segment-">&#182;</a></h1><p><img src="r-cnn-segment.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="-Mask-R-CNN-Post-"><center> Mask R-CNN Post </center><a class="anchor-link" href="#-Mask-R-CNN-Post-">&#182;</a></h1><p><img src="r-cnn-pose.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="-DeepDream-"><center> DeepDream </center><a class="anchor-link" href="#-DeepDream-">&#182;</a></h1><p><img src="deepdream.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="-Style-transfer-"><center> Style-transfer </center><a class="anchor-link" href="#-Style-transfer-">&#182;</a></h1><p><img src="style-transfer.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="-Gramian-&#30697;&#38499;-"><center> Gramian &#30697;&#38499; </center><a class="anchor-link" href="#-Gramian-&#30697;&#38499;-">&#182;</a></h1><p>設 $A$ 為一個 $m\times n$ 階實矩陣，$n$ 階方陣 $G=[g_{ij}]=A^TA$ 稱為 Gramian 或 Gram 矩陣，也有人稱之為交互乘積 (cross-product) 矩陣。考慮 $A$ 的行向量表達式 $A=\begin{bmatrix}    \mathbf{a}_1&amp;\mathbf{a}_2&amp;\cdots&amp;\mathbf{a}_n    \end{bmatrix}$，$\mathbf{a}_i\in\mathbb{R}^m$，則:
+    $$G=A^TA=\begin{bmatrix}  \mathbf{a}_1^T\\    \mathbf{a}_2^T\\    \vdots\\    \mathbf{a}_n^T    \end{bmatrix}\begin{bmatrix}    \mathbf{a}_1&amp;\mathbf{a}_2&amp;\cdots&amp;\mathbf{a}_n    \end{bmatrix}=\begin{bmatrix}    \mathbf{a}_1^T\mathbf{a}_1&amp;\mathbf{a}_1^T\mathbf{a}_2&amp;\cdots&amp;\mathbf{a}_1^T\mathbf{a}_n\\    \mathbf{a}_2^T\mathbf{a}_1&amp;\mathbf{a}_2^T\mathbf{a}_2&amp;\cdots&amp;\mathbf{a}_2^T\mathbf{a}_n\\    ~&amp;~&amp;~&amp;~\\    \mathbf{a}_n^T\mathbf{a}_1&amp;\mathbf{a}_n^T\mathbf{a}_2&amp;\cdots&amp;\mathbf{a}_n^T\mathbf{a}_n    \end{bmatrix}$$</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[1 1]
+ [3 4]]
+[[10 13]
+ [13 17]]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span>        <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--content_layers&#39;</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;conv4_2&#39;</span><span class="p">],</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;VGG19 layers used for content loss&#39;</span><span class="p">)</span>
+        <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--style_layers&#39;</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;relu1_1&#39;</span><span class="p">,</span> <span class="s1">&#39;relu2_1&#39;</span><span class="p">,</span> <span class="s1">&#39;relu3_1&#39;</span><span class="p">,</span> <span class="s1">&#39;relu4_1&#39;</span><span class="p">,</span> <span class="s1">&#39;relu5_1&#39;</span><span class="p">],</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;VGG19 layers used for style loss&#39;</span><span class="p">)</span>
+    
+        <span class="sd">&quot;&quot;&quot;https://github.com/hwalsuklee/tensorflow-style-transfer/blob/master/style_transfer.py&quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot; compute loss &quot;&quot;&quot;</span>
+        <span class="n">L_content</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">L_style</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">Fs</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">CONTENT_LAYERS</span><span class="p">:</span>
+                <span class="c1">## content loss ##</span>
+
+                <span class="n">F</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Fs</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span>            <span class="c1"># content feature of x</span>
+                <span class="n">P</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Ps</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span>            <span class="c1"># content feature of p</span>
+
+                <span class="n">_</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">get_shape</span><span class="p">()</span> <span class="c1"># first return value is batch size (must be one)</span>
+                <span class="n">N</span> <span class="o">=</span> <span class="n">h</span><span class="o">.</span><span class="n">value</span><span class="o">*</span><span class="n">w</span><span class="o">.</span><span class="n">value</span>        <span class="c1"># product of width and height</span>
+                <span class="n">M</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">value</span>                <span class="c1"># number of filters</span>
+
+                <span class="n">w</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">CONTENT_LAYERS</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span><span class="c1"># weight for this layer</span>
+
+                <span class="c1"># You may choose different normalization constant</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_loss_norm_type</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+                    <span class="n">L_content</span> <span class="o">+=</span> <span class="n">w</span> <span class="o">*</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_sum</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">pow</span><span class="p">((</span><span class="n">F</span><span class="o">-</span><span class="n">P</span><span class="p">),</span> <span class="mi">2</span><span class="p">))</span> <span class="o">/</span> <span class="mi">2</span> <span class="c1"># original paper</span>
+                <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_loss_norm_type</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                    <span class="n">L_content</span> <span class="o">+=</span> <span class="n">w</span> <span class="o">*</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_sum</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">pow</span><span class="p">((</span><span class="n">F</span><span class="o">-</span><span class="n">P</span><span class="p">),</span> <span class="mi">2</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="n">N</span><span class="o">*</span><span class="n">M</span><span class="p">)</span> <span class="c1">#artistic style transfer for videos</span>
+                <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_loss_norm_type</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span> <span class="c1"># this is from https://github.com/cysmith/neural-style-tf/blob/master/neural_style.py</span>
+                    <span class="n">L_content</span> <span class="o">+=</span> <span class="n">w</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.</span> <span class="o">/</span> <span class="p">(</span><span class="mf">2.</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">M</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">N</span><span class="p">)))</span> <span class="o">*</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_sum</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">pow</span><span class="p">((</span><span class="n">F</span> <span class="o">-</span> <span class="n">P</span><span class="p">),</span> <span class="mi">2</span><span class="p">))</span>
+
+            <span class="k">elif</span> <span class="nb">id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">STYLE_LAYERS</span><span class="p">:</span>
+                <span class="c1">## style loss ##</span>
+
+                <span class="n">F</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Fs</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span>
+
+                <span class="n">_</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">get_shape</span><span class="p">()</span>  <span class="c1"># first return value is batch size (must be one)</span>
+                <span class="n">N</span> <span class="o">=</span> <span class="n">h</span><span class="o">.</span><span class="n">value</span> <span class="o">*</span> <span class="n">w</span><span class="o">.</span><span class="n">value</span>       <span class="c1"># product of width and height</span>
+                <span class="n">M</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">value</span>                 <span class="c1"># number of filters</span>
+
+                <span class="n">w</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">STYLE_LAYERS</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span>   <span class="c1"># weight for this layer</span>
+
+                <span class="n">G</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_gram_matrix</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>    <span class="c1"># style feature of x</span>
+                <span class="n">A</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">As</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span>             <span class="c1"># style feature of a</span>
+
+                <span class="n">L_style</span> <span class="o">+=</span> <span class="n">w</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.</span> <span class="o">/</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">N</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">M</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span> <span class="o">*</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_sum</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">pow</span><span class="p">((</span><span class="n">G</span><span class="o">-</span><span class="n">A</span><span class="p">),</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-cyan-intense-fg ansi-bold">  File </span><span class="ansi-green-intense-fg ansi-bold">&#34;&lt;ipython-input-2-e8223f7ccc10&gt;&#34;</span><span class="ansi-cyan-intense-fg ansi-bold">, line </span><span class="ansi-green-intense-fg ansi-bold">2</span>
+<span class="ansi-yellow-intense-fg ansi-bold">    L_content = 0</span>
+<span class="ansi-white-intense-fg ansi-bold">    ^</span>
+<span class="ansi-red-intense-fg ansi-bold">IndentationError</span><span class="ansi-red-intense-fg ansi-bold">:</span> unexpected indent
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="-CNN-GAN-"><center> CNN GAN </center><a class="anchor-link" href="#-CNN-GAN-">&#182;</a></h1><p><img src="gan.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="-GAN-Training-"><center> GAN Training </center><a class="anchor-link" href="#-GAN-Training-">&#182;</a></h1><p><img src="gan-training.png" alt=""></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="-Sequential-Model-"><center> Sequential Model </center><a class="anchor-link" href="#-Sequential-Model-">&#182;</a></h1><p><img src="sequence.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="model_sequence.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="-Markov-model-"><center> Markov model </center><a class="anchor-link" href="#-Markov-model-">&#182;</a></h1><p><img src="markov.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="-Markov-model-"><center> Markov model </center><a class="anchor-link" href="#-Markov-model-">&#182;</a></h1><p><img src="weather.png" alt=""></p>
+<h1 id="-Hidden-Markov-model-"><center> Hidden Markov model </center><a class="anchor-link" href="#-Hidden-Markov-model-">&#182;</a></h1><p><img src="weather1.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="-Hidden-Markov-model-"><center> Hidden Markov model </center><a class="anchor-link" href="#-Hidden-Markov-model-">&#182;</a></h1><p><img src="HMM.png" alt=""></p>
+<h1 id="-HMM-&#36755;&#20837;&#27861;&#24212;&#29992;-"><center> HMM &#36755;&#20837;&#27861;&#24212;&#29992; </center><a class="anchor-link" href="#-HMM-&#36755;&#20837;&#27861;&#24212;&#29992;-">&#182;</a></h1><p><img src="输入法.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="-RNN-"><center> RNN </center><a class="anchor-link" href="#-RNN-">&#182;</a></h1><hr>
+<ul>
+<li>image captioning</li>
+<li>sentiment classification</li>
+<li>machine translation</li>
+<li>video classification on frame level</li>
+</ul>
+<p><img src="rnn-model.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="-RNN-"><center> RNN </center><a class="anchor-link" href="#-RNN-">&#182;</a></h1><h2 id="${h_t}-=-\tan-({W_{{\rm{x}}h}}{x_{_t}}-+-{W_{hh}}{h_{t---1}}-+-b)$">${h_t} = \tan ({W_{{\rm{x}}h}}{x_{_t}} + {W_{hh}}{h_{t - 1}} + b)$<a class="anchor-link" href="#${h_t}-=-\tan-({W_{{\rm{x}}h}}{x_{_t}}-+-{W_{hh}}{h_{t---1}}-+-b)$">&#182;</a></h2><p><img src="rnn.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="-LSTM-"><center> LSTM </center><a class="anchor-link" href="#-LSTM-">&#182;</a></h1><p>Colah LSTM：<a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">http://colah.github.io/posts/2015-08-Understanding-LSTMs/</a></p>
+<p>Colah中文版: <a href="https://www.yunaitong.cn/understanding-lstm-networks.html">https://www.yunaitong.cn/understanding-lstm-networks.html</a>
+<img src="lstm.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="-Image-Captioning-"><center> Image Captioning </center><a class="anchor-link" href="#-Image-Captioning-">&#182;</a></h1><p><img src="rnn_straw.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="image_caption.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="rnn-code.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="rnn-answer.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="rnn-hard.png" alt=""></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="-Reinforcement-Learning-"><center> Reinforcement Learning </center><a class="anchor-link" href="#-Reinforcement-Learning-">&#182;</a></h1><hr>
+<p><img src="reinforcement.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="alphago.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="-Q-learning-"><center> Q-learning </center><a class="anchor-link" href="#-Q-learning-">&#182;</a></h1><p>Q-learning demo 英文版：<a href="http://mnemstudio.org/path-finding-q-learning-tutorial.htm">http://mnemstudio.org/path-finding-q-learning-tutorial.htm</a></p>
+<p>Q-learning demo 中文版: <a href="http://www.cnblogs.com/stevenbush/p/3359603.html">http://www.cnblogs.com/stevenbush/p/3359603.html</a></p>
+<p><img src="Q-learning.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="door.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="door-state.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="R.png" alt=""></p>
+<p>$\begin{array}{l}
+Q\left( {1,5} \right) = R\left( {1,5} \right) + 0.8 * \max \{ Q(5,1),Q(5,4),Q(5,5)\} = 100 + 0.8*\max \{ 0,0,0\}  = 100
+\end{array}$
+<img src="Q.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="Q-end.png" alt="">
+<img src="q-result.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="Q-para.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">HTML</span>
+
+<span class="c1"># Youtube</span>
+<span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;iframe width=&quot;720&quot; height=&quot;480&quot; src=&quot;Bidirectionally-Coordinated Nets (BiCNet) for Playing StarCraft Combats.mp4?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[2]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<iframe width="720" height="480" src="Bidirectionally-Coordinated Nets (BiCNet) for Playing StarCraft Combats.mp4?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="-Mastering-StarCraft-with-AI-"><center> Mastering StarCraft with AI </center><a class="anchor-link" href="#-Mastering-StarCraft-with-AI-">&#182;</a></h1><p>Researchers from Alibaba and University College London developed a deep learning-based system that learned how to execute a number of strategies for the popular real-time strategy game StarCraft.</p>
+<p><img src="STARCRAFT.png" alt=""></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="-ML&#38382;&#39064;&#28857;-"><center> ML&#38382;&#39064;&#28857; </center><a class="anchor-link" href="#-ML&#38382;&#39064;&#28857;-">&#182;</a></h1><ul>
+<li>size</li>
+<li>time</li>
+<li>energy</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="ml_problem1.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="ml_problem2.png" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="ml_problem3.png" alt=""></p>
 
 </div>
 </div>
@@ -13464,6 +14258,9 @@ require(
             history: true,
 
             transition: "slide",
+
+            width: 1280,
+            height: 1080,
 
             // Optional libraries used to extend on reveal.js
             dependencies: [
