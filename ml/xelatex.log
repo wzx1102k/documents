@@ -1,0 +1,20 @@
+2018-03-26 08:50:27,752+0800 INFO  xelatex - going to create file: xelatex.fmt
+2018-03-26 08:50:29,764+0800 INFO  xelatex - installing package xetex-def triggered by tex\xelatex\xetex-def\xetex.def
+2018-03-26 08:50:32,450+0800 INFO  xelatex - mpm: starting package maintenance...
+2018-03-26 08:50:32,450+0800 INFO  xelatex - mpm: installation directory: C:\Users\yq\AppData\Roaming\MiKTeX\2.9
+2018-03-26 08:50:32,450+0800 INFO  xelatex - mpm: package repository: http://mirror.ctan.org/systems/win32/miktex/tm/packages/
+2018-03-26 08:50:32,588+0800 INFO  xelatex - mpm: lightweight database digest: e7364133ce371dab94778f1d408ab8e7
+2018-03-26 08:50:32,605+0800 FATAL xelatex - Unknown archive file size.
+2018-03-26 08:50:32,605+0800 FATAL xelatex - Info: package="xetex-def"
+2018-03-26 08:50:32,606+0800 FATAL xelatex - Source: libraries\miktex\packagemanager\internal.h
+2018-03-26 08:50:32,606+0800 FATAL xelatex - Line: 477
+2018-03-27 08:28:16,720+0800 INFO  xelatex - installing package xetex-def triggered by tex\xelatex\xetex-def\xetex.def
+2018-03-27 08:28:20,018+0800 FATAL xelatex - Deprecation of outdated MiKTeX package manager. Visit https://miktex.org/kb/mpm2016 for more information.
+2018-03-27 08:28:20,018+0800 FATAL xelatex - Info: =""
+2018-03-27 08:28:20,018+0800 FATAL xelatex - Source: Libraries\MiKTeX\PackageManager\PackageManager.cpp
+2018-03-27 08:28:20,018+0800 FATAL xelatex - Line: 1126
+2018-03-31 08:13:53,155+0800 INFO  xelatex - installing package xetex-def triggered by tex\xelatex\xetex-def\xetex.def
+2018-03-31 08:13:54,208+0800 FATAL xelatex - Deprecation of outdated MiKTeX package manager. Visit https://miktex.org/kb/mpm2016 for more information.
+2018-03-31 08:13:54,208+0800 FATAL xelatex - Info: =""
+2018-03-31 08:13:54,208+0800 FATAL xelatex - Source: Libraries\MiKTeX\PackageManager\PackageManager.cpp
+2018-03-31 08:13:54,209+0800 FATAL xelatex - Line: 1126

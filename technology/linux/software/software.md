@@ -119,6 +119,26 @@ change
 
 use `%%latex`  in jupyter notebook cell
 
+#### jupyter notebook 转PDF
+
+- conda install texlive
+    + `conda config --add channels clinicalgraphics`
+    + `conda install -c clinicalgraphics texlive-core`
+- conda update tlmgr
+    + download update-tlmgr-latest.exe from  http://mirror.ctan.org/systems/texlive/tlnet/update-tlmgr-latest.exe
+    + 执行update-tlmgr-latest.exe,  安装目录选择`anaconda\Library`
+- tlmgr install pkg
+    + `tlmgr install ucs`
+    + `tlmgr install collectbox`
+    + `tlmgr install adjustbox`
+    + `tlmgr install enumitem`
+    + `tlmgr install collection-fontsrecommended`
+- `jupyter nbconvert ml.ipynb --to pdf `
+-  另一种转换pdf方法
+    +  `jupyter nbconvert ml.ipynb --to latex`
+    + `pdflatex ml.tex`
+
+
 #### [latex tutorial](https://www.youtube.com/watch?v=SoDv0qhyysQ)
 
  (markdown 只支持latex公式， 不支持排版)
