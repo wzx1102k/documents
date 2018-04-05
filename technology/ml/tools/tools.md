@@ -2,35 +2,36 @@
 *******
 ## tensorflow
 
-#### tensorflow Introduce
+#### tensorflow general
+
 ![](tf_high_api.png)
 ![](tf_compare.png)
 
-#### tf xavier init
+- tf xavier init
 ![](tf_xavier.png)
 
-#### 使用tf.concat连接多个神经网络输出    
+- 使用tf.concat连接多个神经网络输出    
 ```
     tf.concat(values, concat_dim, name='concat') # 0 : 行， 1: 列
     # fc2_*  大小: 1*54;    predict 大小：1*324
     predict = tf.concat([fc2_1, fc2_2, fc2_3, fc2_4, fc2_5, fc2_6], 1)
 ```
-#### mnist 数据集合 image 是有做过正则化的    
+- mnist 数据集合 image 是有做过正则化的    
 参考[数据预处理](http://ufldl.stanford.edu/wiki/index.php/%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86)
 在处理自然图像时，我们获得的像素值在 [0,255] 区间中，常用的处理是将这些像素值除以 255，使它们缩放到 [0,1] 中.
 
-#### tf.clip_by_value(A, min, max)    
+- tf.clip_by_value(A, min, max)    
 输入一个张量A，把A中的每一个元素的值都压缩在min和max之间。小于min的让它等于min，大于max的元素的值等于max。
 
-#### [What's the difference between softmax and softmax_cross_entropy_with_logits?
+- [What's the difference between softmax and softmax_cross_entropy_with_logits?
 ](https://stackoverflow.com/questions/34240703/whats-the-difference-between-softmax-and-softmax-cross-entropy-with-logits)
 
-    - softmax:  需要额外写loss function
+- softmax:  需要额外写loss function
 ```
 predict = tf.nn.softmax(tf.add(tf.matmul(x, W),  b))
 loss = tf.reduce_mean(-tf.reduce_sum(y_true * tf.log(predict), [1]))
 ```
-    - softmax_cross_entropy_with_logit  计算softmax 以及交叉熵(loss)
+- softmax_cross_entropy_with_logit  计算softmax 以及交叉熵(loss)
 ```
 predict = tf.add(tf.matmul(x, W),  b)
 loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=predict, labels=y_true))
@@ -38,7 +39,7 @@ loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=predict, la
 
 #### tensorflow use gpu
 
-    - 查看平台是否支持gpu
+- 查看平台是否支持gpu
 ```
 from tensorflow.python.client import device_lib
 device_lib.list_local_devices()
@@ -57,7 +58,7 @@ device_lib.list_local_devices()
  incarnation: 6286052981776494181
  physical_device_desc: "device: 0, name: Tesla K80, pci bus id: 0000:00:04.0, compute capability: 3.7"]
 ```
-    - [如何查看tensorflow跑的是gpu版本还是cpu版本？](https://www.zhihu.com/question/263850405)
+- [如何查看tensorflow跑的是gpu版本还是cpu版本？](https://www.zhihu.com/question/263850405)
 ```
 # Creates a graph.
 a = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[2, 3], name='a')
@@ -77,7 +78,7 @@ MatMul: /job:localhost/replica:0/task:0/device:GPU:0
 [[ 22.  28.]
  [ 49.  64.]]
 ```
-    - [tensorflow use gpu train mnist cnn](https://stackoverflow.com/questions/44868914/using-gpu-vs-cpu-in-tensorflow-deep-mnist-example)
+- [tensorflow use gpu train mnist cnn](https://stackoverflow.com/questions/44868914/using-gpu-vs-cpu-in-tensorflow-deep-mnist-example)
 ```
 with tf.device('/gpu:0'):
     W_conv1 = weight_variable([5, 5, 1, 32])
@@ -89,10 +90,10 @@ with tf.device('/gpu:0'):
         for i in range(20000):
             ...
 ```
-    - 新服务器如何配置GPU运行环境？
-        + 查看是否支持GPU
+- 新服务器如何配置GPU运行环境？
+    + 查看是否支持GPU
         `! lspci -nnk | grep -i nvidia`
-        +  安装cuda lib [Adding GPUs to Instances](https://cloud.google.com/compute/docs/gpus/add-gpus#verify-driver-install)
+    +  安装cuda lib [Adding GPUs to Instances](https://cloud.google.com/compute/docs/gpus/add-gpus#verify-driver-install)
 ```
 #!/bin/bash
 echo "Checking for CUDA and installing."
@@ -115,17 +116,14 @@ sudo nvidia-smi --auto-boost-default=DISABLE
 #check cuda version
 nvcc -V
 ```
-        +  [NVIDIA官网下载对应cudnn lib](https://developer.nvidia.com/rdp/cudnn-download)
+    +  [NVIDIA官网下载对应cudnn lib](https://developer.nvidia.com/rdp/cudnn-download)
         `dpkg -i ./libcudnn6_6.0.21-1+cuda8.0_amd64.deb`
 
-        + [安装gpu tensorflow](https://github.com/tensorflow/tensorflow/issues/15604)
+    + [安装gpu tensorflow](https://github.com/tensorflow/tensorflow/issues/15604)
         如果出现版本不对齐问题，查看tensorflow 依赖cuda version。 `pip3 install --upgrade tensorflow-gpu==1.4`
 
-        + [failed call to cuDevicePrimaryCtxReta in: CUDA_ERROR_ECC_UNCORRECTABLE](https://stackoverflow.com/questions/16238458/cannot-create-context-on-nvidia-device-with-ecc-enabled)
-        `nvidia-smi --reset-ecc-errors=0 -g 0`
-
-
-
+    + [failed call to cuDevicePrimaryCtxReta in: CUDA_ERROR_ECC_UNCORRECTABLE](https://stackoverflow.com/questions/16238458/cannot-create-context-on-nvidia-device-with-ecc-enabled)
+`nvidia-smi --reset-ecc-errors=0 -g 0`
 
 
 *****
