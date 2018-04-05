@@ -95,4 +95,40 @@ tfrecord源数据为1,5,8,2:
 
 #### 关于ocr cnn网络使用的参数
 
+#### 关于tensorflow model保存
+
+经常在训练时会碰到执行时，保存的model size 会不断变大，
+
+通过如下代码， 可以查看模型里的内容:
+```
+import os  
+from tensorflow.python import pywrap_tensorflow  
+
+checkpoint_path = os.path.join('save', "model.ckpt")  
+reader = pywrap_tensorflow.NewCheckpointReader(checkpoint_path)  
+var_to_shape_map = reader.get_variable_to_shape_map()  
+for key in var_to_shape_map:  
+    print("tensor_name: ", key)  
+    print(reader.get_tensor(key))
+```
+通过查看发现模型参数在每次执行后都会不断生成新的副本，例如:
+```
+tensor_name:  v2_6
+[[-0.16953406 -0.37586284 -0.85447466]
+ [-1.4980981   0.39075065 -0.01300584]]
+tensor_name:  v2_4
+[[-0.18294911  0.63157284  0.43167743]
+ [ 0.28426486  0.47300717  1.9843858 ]]
+tensor_name:  v2_1
+[[-0.05813545 -0.28196204 -0.5623365 ]
+ [-1.2724656   0.36134648  0.06770093]]
+```
+
+由此可知需要在代码执行时，使用创建图模型:
+```
+g=tf.Graph()
+with g.as_default():
+    ...
+```
+
 **************
