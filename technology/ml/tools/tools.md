@@ -53,12 +53,15 @@ if ! dpkg-query -W cuda-8-0; then
     sudo apt-get update
     sudo apt-get install cuda-8-0 -y
 fi
+
 # Enable persistence mode
 sudo nvidia-smi -pm 1
+
 #performance optimizing
 #for K80
 sudo nvidia-smi -ac 2505,875
 sudo nvidia-smi --auto-boost-default=DISABLE
+
 #check cuda version
 nvcc -V
 ```
@@ -66,8 +69,7 @@ nvcc -V
 ```
 dpkg -i ./libcudnn6_6.0.21-1+cuda8.0_amd64.deb
 ```
-- [安装gpu tensorflow](https://github.com/tensorflow/tensorflow/issues/15604)
-
+- [安装gpu tensorflow](https://github.com/tensorflow/tensorflow/issues/15604)    
 如果出现版本不对齐问题，查看tensorflow 依赖cuda version。 `pip3 install --upgrade tensorflow-gpu==1.4`
 - [failed call to cuDevicePrimaryCtxReta in: CUDA_ERROR_ECC_UNCORRECTABLE](https://stackoverflow.com/questions/16238458/cannot-create-context-on-nvidia-device-with-ecc-enabled)
 ```
@@ -77,6 +79,19 @@ nvidia-smi --reset-ecc-errors=0 -g 0
 ```
 from tensorflow.python.client import device_lib
 device_lib.list_local_devices()
+[name: "/device:CPU:0"
+device_type: "CPU"
+memory_limit: 268435456
+locality {
+}
+incarnation: 16925341359735686096, name: "/device:GPU:0"
+device_type: "GPU"
+memory_limit: 292159488
+locality {
+ bus_id: 1
+}
+incarnation: 6286052981776494181
+physical_device_desc: "device: 0, name: Tesla K80, pci bus id: 0000:00:04.0, compute capability: 3.7"]
 ```
 - [如何查看tensorflow跑的是gpu版本还是cpu版本？](https://www.zhihu.com/question/263850405)
 ```
