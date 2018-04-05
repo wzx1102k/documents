@@ -36,25 +36,47 @@ predict = tf.add(tf.matmul(x, W),  b)
 loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=predict, labels=y_true))
 ```
 
-#### tensorflow use gpu
+#### 新服务器如何配置GPU运行环境？
+- 查看是否支持GPU
+```
+! lspci -nnk | grep -i nvidia
+```
+- 安装cuda lib [Adding GPUs to Instances](https://cloud.google.com/compute/docs/gpus/add-gpus#verify-driver-install)
+```
+#!/bin/bash
+echo "Checking for CUDA and installing."
+# Check for CUDA and try to install.
+if ! dpkg-query -W cuda-8-0; then
+    # The 16.04 installer works with 16.10.
+    curl -O https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
+    dpkg -i ./cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
+    sudo apt-get update
+    sudo apt-get install cuda-8-0 -y
+fi
+# Enable persistence mode
+sudo nvidia-smi -pm 1
+#performance optimizing
+#for K80
+sudo nvidia-smi -ac 2505,875
+sudo nvidia-smi --auto-boost-default=DISABLE
+#check cuda version
+nvcc -V
+```
+-  [NVIDIA官网下载对应cudnn lib](https://developer.nvidia.com/rdp/cudnn-download)
+```
+dpkg -i ./libcudnn6_6.0.21-1+cuda8.0_amd64.deb
+```
+- [安装gpu tensorflow](https://github.com/tensorflow/tensorflow/issues/15604)
 
+如果出现版本不对齐问题，查看tensorflow 依赖cuda version。 `pip3 install --upgrade tensorflow-gpu==1.4`
+- [failed call to cuDevicePrimaryCtxReta in: CUDA_ERROR_ECC_UNCORRECTABLE](https://stackoverflow.com/questions/16238458/cannot-create-context-on-nvidia-device-with-ecc-enabled)
+```
+nvidia-smi --reset-ecc-errors=0 -g 0
+```
 - 查看平台是否支持gpu
 ```
 from tensorflow.python.client import device_lib
 device_lib.list_local_devices()
-[name: "/device:CPU:0"
- device_type: "CPU"
- memory_limit: 268435456
- locality {
- }
- incarnation: 16925341359735686096, name: "/device:GPU:0"
- device_type: "GPU"
- memory_limit: 292159488
- locality {
-   bus_id: 1
- }
- incarnation: 6286052981776494181
- physical_device_desc: "device: 0, name: Tesla K80, pci bus id: 0000:00:04.0, compute capability: 3.7"]
 ```
 - [如何查看tensorflow跑的是gpu版本还是cpu版本？](https://www.zhihu.com/question/263850405)
 ```
@@ -87,38 +109,6 @@ with tf.device('/gpu:0'):
         for i in range(20000):
             ...
 ```
-- 新服务器如何配置GPU运行环境？
-    + 查看是否支持GPU
-        `! lspci -nnk | grep -i nvidia`
-    +  安装cuda lib [Adding GPUs to Instances](https://cloud.google.com/compute/docs/gpus/add-gpus#verify-driver-install)
-```
-#!/bin/bash
-echo "Checking for CUDA and installing."
-# Check for CUDA and try to install.
-if ! dpkg-query -W cuda-8-0; then
-    # The 16.04 installer works with 16.10.
-    curl -O https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
-    dpkg -i ./cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
-    sudo apt-get update
-    sudo apt-get install cuda-8-0 -y
-fi
-# Enable persistence mode
-sudo nvidia-smi -pm 1
-#performance optimizing
-#for K80
-sudo nvidia-smi -ac 2505,875
-sudo nvidia-smi --auto-boost-default=DISABLE
-#check cuda version
-nvcc -V
-```
-    +  [NVIDIA官网下载对应cudnn lib](https://developer.nvidia.com/rdp/cudnn-download)
-        `dpkg -i ./libcudnn6_6.0.21-1+cuda8.0_amd64.deb`
-
-    + [安装gpu tensorflow](https://github.com/tensorflow/tensorflow/issues/15604)
-        如果出现版本不对齐问题，查看tensorflow 依赖cuda version。 `pip3 install --upgrade tensorflow-gpu==1.4`
-
-    + [failed call to cuDevicePrimaryCtxReta in: CUDA_ERROR_ECC_UNCORRECTABLE](https://stackoverflow.com/questions/16238458/cannot-create-context-on-nvidia-device-with-ecc-enabled)
-`nvidia-smi --reset-ecc-errors=0 -g 0`
 
 
 *****
