@@ -53,15 +53,14 @@ if ! dpkg-query -W cuda-8-0; then
     sudo apt-get update
     sudo apt-get install cuda-8-0 -y
 fi
-
+```
+```
 # Enable persistence mode
 sudo nvidia-smi -pm 1
-
 #performance optimizing
 #for K80
 sudo nvidia-smi -ac 2505,875
 sudo nvidia-smi --auto-boost-default=DISABLE
-
 #check cuda version
 nvcc -V
 ```
