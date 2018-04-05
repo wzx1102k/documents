@@ -7,10 +7,15 @@
     apt install terminator
     apt install python3-pip
     apt install python3-tk
-    pip3 install tensorflow
+    pip3 install tensorflow ## pip3 install tensorflow-gpu==1.4
     pip3 install scipy
     pip3 install matplotlib
-
+    pip3 install jupyter
+    pip3 install Cython
+    pip3 install pycocotools
+    pip3 install keras
+    pip3 install h5py
+    pip3 install scikit-image
 
     # 翻墙
     add-apt-repository ppa:hzwhuang/ss-qt5

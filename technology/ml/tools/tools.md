@@ -124,6 +124,41 @@ with tf.device('/gpu:0'):
             ...
 ```
 
+#### 远程使用google cloud的jupyter notebook
+- 服务器安装notebook
+```
+pip3 install jupyter
+```
+- [设置google cloud 防火墙规则](https://blog.csdn.net/bobobe/article/details/79764600)    
+设置入站规则，添加jupyter notebook端口号允许远程访问。(出站就是你访问外网 入站就是外网访问你)
+- 生成jupyter 远程登陆密码    
+本地使用jupyter notebook制作登陆密码
+```
+from notebook.auth import passwd
+passwd()
+Enter password: ··········
+Verify password: ··········
+'sha1:....'
+```
+- 生成jupyter notebook配置文件    
+生成`~/.jupyter/jupyter_notebook_config.py`
+```
+jupyter notebook --generate-config
+```
+- 修改配置文件    
+在 jupyter_notebook_config.py 中找到下面的行，取消注释并修改。
+```
+c.NotebookApp.ip='*'
+c.NotebookApp.password = u'sha:ce...刚才复制的那个密文'
+c.NotebookApp.open_browser = False
+c.NotebookApp.port =8888 #google cloud防火墙允许端口号
+```
+- 登陆 jupyter notebook
+    + ssh 执行`jupyter notebook`
+    + 网页输入http://[google cloud static ip]
+:[port]
+    + 输入制作的登陆密码
+
 
 *****
 ## numpy
