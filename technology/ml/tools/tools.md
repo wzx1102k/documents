@@ -42,7 +42,6 @@ loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=predict, la
 ```
 from tensorflow.python.client import device_lib
 device_lib.list_local_devices()
-
 [name: "/device:CPU:0"
  device_type: "CPU"
  memory_limit: 268435456
@@ -67,7 +66,6 @@ c = tf.matmul(a, b)
 sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
 # Runs the op.
 print(sess.run(c))
-
 Device mapping:
 /job:localhost/replica:0/task:0/device:GPU:0 -> device: 0, name: Tesla K40c, pci bus
 id: 0000:05:00.0
@@ -106,12 +104,10 @@ if ! dpkg-query -W cuda-8-0; then
 fi
 # Enable persistence mode
 sudo nvidia-smi -pm 1
-
 #performance optimizing
 #for K80
 sudo nvidia-smi -ac 2505,875
 sudo nvidia-smi --auto-boost-default=DISABLE
-
 #check cuda version
 nvcc -V
 ```
