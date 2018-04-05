@@ -23,8 +23,7 @@
 - tf.clip_by_value(A, min, max)    
 输入一个张量A，把A中的每一个元素的值都压缩在min和max之间。小于min的让它等于min，大于max的元素的值等于max。
 
-- [What's the difference between softmax and softmax_cross_entropy_with_logits?
-](https://stackoverflow.com/questions/34240703/whats-the-difference-between-softmax-and-softmax-cross-entropy-with-logits)
+- [What's the difference between softmax and softmax_cross_entropy_with_logits?](https://stackoverflow.com/questions/34240703/whats-the-difference-between-softmax-and-softmax-cross-entropy-with-logits)
 
 - softmax:  需要额外写loss function
 ```
