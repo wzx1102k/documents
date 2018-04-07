@@ -69,8 +69,11 @@ nvcc -V
 dpkg -i ./libcudnn6_6.0.21-1+cuda8.0_amd64.deb
 ```
 - [安装gpu tensorflow](https://github.com/tensorflow/tensorflow/issues/15604)    
-如果出现版本不对齐问题，查看tensorflow 依赖cuda version。 `pip3 install --upgrade tensorflow-gpu==1.4`
-- [failed call to cuDevicePrimaryCtxReta in: CUDA_ERROR_ECC_UNCORRECTABLE](https://stackoverflow.com/questions/16238458/cannot-create-context-on-nvidia-device-with-ecc-enabled)
+如果出现版本不对齐问题，查看tensorflow 依赖cuda version。
+```
+pip3 install --upgrade tensorflow-gpu==1.4
+```
+- [failed call to cuDevicePrimaryCtxReta in: CUDA_ERROR_ECC_UNCORRECTABLE](https://stackoverflow.com/questions/16238458/cannot-create-context-on-nvidia-device-with-ecc-enabled)    
 ```
 nvidia-smi --reset-ecc-errors=0 -g 0
 ```
@@ -145,7 +148,7 @@ Verify password: ··········
 ```
 jupyter notebook --generate-config
 ```
-- 修改配置文件    
+- [修改配置文件](https://blog.csdn.net/simple_the_best/article/details/77005400)    
 在 jupyter_notebook_config.py 中找到下面的行，取消注释并修改。
 ```
 c.NotebookApp.ip='*'
@@ -158,6 +161,18 @@ c.NotebookApp.port =8888 #google cloud防火墙允许端口号
     + 网页输入http://[google cloud static ip]
 :[port]
     + 输入制作的登陆密码
+
+#### google cloud  sftp文件传输
+
+    + 本地连接vpn服务器```sftp -P Port hostname@vps ip```
+    + 上传文件```sftp> put file```    
+     Uploading file to /home/hostname/file
+     file          100% 5045     4.9KB/s   00:00
+    + google cloud 连接vpn服务器```sftp -P Port hostname@vps ip```
+    +  下载文件```sftp> get file```    
+    Fetching /home/hostname/file to file
+    /home/hostname/file                   89%  490MB   6.1MB/s   00:09 ETA
+
 
 
 *****
